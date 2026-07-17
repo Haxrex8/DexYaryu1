@@ -1,0 +1,430 @@
+/* ================= GLOBAL ================= */
+
+body {
+  margin: 0;
+  font-family: 'Segoe UI', system-ui, sans-serif;
+
+  min-height: 100vh;
+  width: 100vw;
+
+  display: flex;
+  justify-content: center;
+  align-items: stretch;
+
+  color: white;
+
+  background:
+    radial-gradient(circle at 20% 20%, #1b2a4a, transparent 40%),
+    radial-gradient(circle at 80% 30%, #2b1b4a, transparent 45%),
+    radial-gradient(circle at 50% 80%, #0f3a3a, transparent 50%),
+    #0b0f17;
+}
+
+/* ================= DARK MODE ================= */
+
+body.dark {
+  background:
+    radial-gradient(circle at 20% 20%, #0f1724, transparent 40%),
+    radial-gradient(circle at 80% 30%, #120c1c, transparent 45%),
+    radial-gradient(circle at 50% 80%, #071010, transparent 50%),
+    #04060a;
+}
+
+/* ================= DARK MODE TOGGLE (VERTICAL SIDEBAR) ================= */
+
+.dark-toggle {
+  position: fixed;
+  left: 0;
+  top: 50%;
+  transform: translateY(-50%);
+
+  writing-mode: vertical-rl;
+  text-orientation: mixed;
+
+  padding: 14px 8px;
+
+  border-radius: 0 12px 12px 0;
+
+  background: rgba(20, 20, 30, 0.75);
+  border: 1px solid rgba(255,255,255,0.18);
+
+  color: white;
+  font-size: 12px;
+  font-weight: 600;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+
+  cursor: pointer;
+  z-index: 1000;
+
+  transition: 0.2s ease;
+}
+
+.dark-toggle:hover {
+  background: rgba(0,255,255,0.15);
+  border-color: rgba(0,255,255,0.3);
+  transform: translateY(-50%) translateX(2px);
+}
+
+/* ================= APP SHELL ================= */
+
+.pokedex-card {
+  width: 100vw;
+  min-height: 100vh;
+
+  padding: 24px 32px;
+
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+
+  background: rgba(255,255,255,0.04);
+  backdrop-filter: blur(18px);
+}
+
+/* ================= LAYOUT ================= */
+
+.pokedex-layout {
+  display: grid;
+  grid-template-columns: 2.5fr 1.2fr 1fr;
+  gap: 32px;
+
+  width: 100%;
+  flex: 1;
+
+  align-items: stretch;
+  overflow: hidden;
+}
+
+/* ================= PANELS ================= */
+
+.main-view,
+.control-panel,
+.favorites-panel {
+  background: rgba(255,255,255,0.05);
+  border: 1px solid rgba(255,255,255,0.08);
+  border-radius: 18px;
+
+  padding: 24px;
+
+  display: flex;
+  flex-direction: column;
+
+  min-width: 0;
+  overflow: hidden;
+}
+
+/* ================= MAIN VIEW ================= */
+
+.main-view {
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  gap: 14px;
+}
+
+/* ================= IMAGE ================= */
+
+.image-frame {
+  width: min(85vw, 720px);
+  aspect-ratio: 4 / 3;
+
+  border-radius: 18px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  overflow: hidden;
+
+  background: rgba(255,255,255,0.04);
+  border: 1px solid rgba(255,255,255,0.10);
+}
+
+.pokemon-image {
+  max-width: 100%;
+  max-height: 100%;
+  object-fit: contain;
+}
+
+/* ================= NUMBER ================= */
+
+.number {
+  font-size: 18px;
+  color: rgba(255,255,255,0.5);
+}
+
+.number.favorite {
+  color: gold !important;
+  text-shadow: 0 0 10px rgba(255, 215, 0, 0.6);
+}
+
+/* ================= NAME ================= */
+
+.name {
+  font-size: 56px;
+  font-weight: 800;
+
+  margin-bottom: 14px;
+
+  background: linear-gradient(90deg,#7df9ff,#b56cff);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+/* ================= TYPES ================= */
+
+.types {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  justify-content: center;
+  align-items: center;
+}
+
+.type {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+
+  padding: 6px 12px;
+  border-radius: 999px;
+
+  font-size: 12px;
+  font-weight: bold;
+
+  color: white;
+
+  border: 1px solid rgba(255,255,255,0.22);
+  box-shadow: 0 2px 6px rgba(0,0,0,0.25);
+}
+
+.type-icon {
+  width: 18px;
+  height: 18px;
+  object-fit: contain;
+}
+
+/* TYPE COLORS */
+.normal { background:#9da0a2; }
+.fire { background:#f4313f; }
+.water { background:#00b2e2; }
+.electric { background:#e0cc00; }
+.grass { background:#00ae41; }
+.ice { background:#82dade; }
+.fighting { background:#d79a2a; }
+.poison { background:#a77bc8; }
+.ground { background:#ca8241; }
+.flying { background:#56b3e4; }
+.psychic { background:#f67eb4; }
+.bug { background:#a8c27e; }
+.rock { background:#8b8179; }
+.ghost { background:#a67db1; }
+.dragon { background:#0083ae; }
+.dark { background:#5a6771; }
+.steel { background:#979899; }
+.fairy { background:#f3b1db; }
+.mystery { background:#3f1d33; }
+
+/* ================= STAGE ================= */
+
+#stageLabel {
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+
+  padding: 6px 14px;
+  border-radius: 999px;
+
+  font-weight: 700;
+  font-size: 13px;
+
+  border: 1px solid rgba(255,255,255,0.22);
+  box-shadow: 0 2px 6px rgba(0,0,0,0.25);
+}
+
+#stageLabel[data-stage="single"] { background:#1876f0; color:white; }
+#stageLabel[data-stage="first"] { background:#6edc49; color:#0b0f17; }
+#stageLabel[data-stage="middle"] { background:#f3ca52; color:#0b0f17; }
+#stageLabel[data-stage="final"] { background:#ea5353; color:white; }
+#stageLabel[data-stage="spiritbound"] { background:#703151; color:white; }
+
+/* ================= EVOLUTION ================= */
+
+.evolution-tree {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+
+  justify-content: center;
+  align-items: center;
+
+  padding: 10px 0;
+  max-width: 100%;
+}
+
+.evo-item {
+  padding: 6px 12px;
+  border-radius: 12px;
+
+  background: rgba(255,255,255,0.10);
+  border: 1px solid rgba(255,255,255,0.22);
+
+  font-size: 13px;
+  font-weight: 600;
+
+  color: white;
+
+  cursor: pointer;
+  transition: 0.2s ease;
+}
+
+.evo-item:hover {
+  background: rgba(0,255,255,0.12);
+  border-color: rgba(0,255,255,0.35);
+  transform: translateY(-1px);
+}
+
+.evo-arrow {
+  margin: 0 4px;
+  color: rgba(255,255,255,0.7);
+  font-weight: bold;
+}
+
+/* ================= BUTTONS ================= */
+
+button {
+  padding: 10px 14px;
+  border-radius: 12px;
+
+  background: rgba(255,255,255,0.08);
+  border: 1px solid rgba(255,255,255,0.12);
+
+  color: white;
+  cursor: pointer;
+
+  transition: 0.2s ease;
+}
+
+button:hover {
+  background: rgba(0,255,255,0.12);
+  border-color: rgba(0,255,255,0.25);
+}
+
+button:active {
+  transform: scale(0.97);
+}
+
+/* ================= NAV ================= */
+
+.nav,
+.nav.controls {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+
+  justify-content: space-between;
+  align-items: center;
+
+  width: 100%;
+  margin-bottom: 10px;
+}
+
+.nav button {
+  flex: 1;
+  min-width: 110px;
+}
+
+.nav label {
+  white-space: nowrap;
+  font-weight: 600;
+}
+
+.nav input,
+.nav select {
+  flex: 2;
+  min-width: 140px;
+}
+
+/* ================= INPUTS ================= */
+
+input,
+select {
+  width: 100%;
+  box-sizing: border-box;
+
+  padding: 12px 14px;
+  border-radius: 14px;
+
+  background: rgba(20, 20, 30, 0.6);
+  border: 1px solid rgba(255,255,255,0.18);
+
+  color: white;
+  font-size: 14px;
+
+  text-align: center;
+
+  outline: none;
+
+  appearance: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+
+  cursor: pointer;
+}
+
+/* dropdown options */
+select option {
+  background: #111827;
+  color: white;
+}
+
+/* ================= TEAM ================= */
+
+.trainer-card {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 10px;
+
+  width: 100%;
+}
+
+/* CENTERED BUTTON */
+.team-btn {
+  display: block;
+  margin: 12px auto 0 auto;
+
+  width: fit-content;
+  min-width: 220px;
+
+  text-align: center;
+}
+
+.team-slot {
+  background: rgba(255,255,255,0.06);
+  border: 1px solid rgba(255,255,255,0.12);
+  border-radius: 12px;
+
+  padding: 10px;
+  cursor: pointer;
+
+  text-align: center;
+  overflow: hidden;
+}
+
+/* ================= MOBILE ================= */
+
+@media (max-width: 600px) {
+  .pokedex-layout {
+    grid-template-columns: 1fr;
+  }
+
+  .name {
+    font-size: 36px;
+  }
+
+  .trainer-card {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+

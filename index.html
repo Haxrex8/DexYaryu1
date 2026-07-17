@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>YaryuDex</title>
+  <link rel="stylesheet" href="index.css"/>
+</head>
+
+<body>
+
+<button id="darkModeToggle" class="dark-toggle">
+  🌙 Dark Mode 🌙
+</button>
+
+<div class="pokedex-card">
+
+  <div class="pokedex-layout">
+
+    <!-- ================= MAIN VIEW ================= -->
+    <div class="main-view">
+
+      <div class="image-frame">
+        <img id="img" class="pokemon-image" alt="Pokémon sprite"/>
+      </div>
+
+      <div class="number" id="num"></div>
+      <div class="name" id="name"></div>
+
+      <div class="types" id="types"></div>
+
+      <div id="stageLabel"></div>
+
+      <div id="evoChain" class="evolution-tree"></div>
+
+    </div>
+
+    <!-- ================= CONTROL PANEL ================= -->
+    <div class="control-panel">
+
+      <!-- NAVIGATION -->
+      <div class="nav">
+
+        <button type="button" onclick="prev()">⬅ Prev</button>
+        <button type="button" onclick="next()">Next ➡</button>
+        <button type="button" onclick="randomPokemon()">🎲 Random 🎲</button>
+        <button type="button" onclick="playCry()">🔊 Cry</button>
+
+        <button type="button" onclick="toggleFavorite()">
+          ⭐ Favorite
+        </button>
+
+      </div>
+
+      <!-- FORM SELECT -->
+      <div class="nav">
+        <label for="formSelect">Form:</label>
+        <select id="formSelect"></select>
+      </div>
+
+      <!-- SEARCH -->
+      <div class="search-wrapper">
+        <input id="searchInput" placeholder="Search Pokémon..." autocomplete="off"/>
+        <div id="suggestions"></div>
+      </div>
+
+      <!-- FILTERS -->
+      <div class="nav controls">
+
+        <input id="jumpDex" type="number" placeholder="Dex #" />
+        <button type="button" onclick="jumpToDex()">Go</button>
+
+        <select id="typeFilter">
+          <option value="">All Types</option>
+          <option value="grass">Grass</option>
+          <option value="fire">Fire</option>
+          <option value="water">Water</option>
+          <option value="electric">Electric</option>
+          <option value="ice">Ice</option>
+          <option value="fighting">Fighting</option>
+          <option value="poison">Poison</option>
+          <option value="ground">Ground</option>
+          <option value="flying">Flying</option>
+          <option value="psychic">Psychic</option>
+          <option value="bug">Bug</option>
+          <option value="rock">Rock</option>
+          <option value="ghost">Ghost</option>
+          <option value="dragon">Dragon</option>
+          <option value="dark">Dark</option>
+          <option value="steel">Steel</option>
+          <option value="fairy">Fairy</option>
+          <option value="normal">Normal</option>
+          <option value="mystery">Mystery</option>
+        </select>
+
+      </div>
+
+      <!-- TEAM -->
+      <input id="teamSize" type="number" min="1" max="6" placeholder="Team Size (1–6)" />
+
+      <button type="button" class="team-btn" onclick="generateRandomTeam()">
+        🎲 Generate Random Team 🎲
+      </button>
+
+      <div class="team-section">
+        <h3>Trainer Team</h3>
+        <div id="teamContainer"></div>
+      </div>
+
+    </div>
+
+    <!-- ================= FAVORITES PANEL ================= -->
+    <div id="favoritesPanel" class="favorites-panel"></div>
+
+  </div>
+
+</div>
+
+<script type="module" src="src/script.js"></script>
+
+</body>
+</html>
