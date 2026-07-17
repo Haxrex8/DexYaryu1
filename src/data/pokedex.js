@@ -1,0 +1,517 @@
+export const pokedex = [
+  {
+    "dex": 1,
+    "speciesId": "kakalil",
+    "name": "Kakalil",
+    "family": [
+      "kakalil",
+      "fronglow",
+      "verdalete"
+    ],
+    "stage": 1,
+    "maxStage": 3,
+    "parents": [],
+    "children": [],
+    "cry": "sounds/pokemon/kakalil.mp3",
+    "forms": {
+      "base": {
+        "name": "Kakalil",
+        "fullName": "Kakalil",
+        "types": [
+          "grass"
+        ],
+        "image": "images/pokemon/kakalil.png",
+        "hasImage": true,
+        "formType": "base"
+      }
+    }
+  },
+  {
+    "dex": 4,
+    "speciesId": "scorchirp",
+    "name": "Scorchirp",
+    "family": [
+      "scorchirp",
+      "pyrill",
+      "reviling"
+    ],
+    "stage": 1,
+    "maxStage": 3,
+    "parents": [],
+    "children": [],
+    "cry": "sounds/pokemon/scorchirp.mp3",
+    "forms": {
+      "base": {
+        "name": "Scorchirp",
+        "fullName": "Scorchirp",
+        "types": [
+          "fire"
+        ],
+        "image": "images/pokemon/scorchirp.png",
+        "hasImage": true,
+        "formType": "base"
+      }
+    }
+  },
+  {
+    "dex": 7,
+    "speciesId": "salhoy",
+    "name": "Salhoy",
+    "family": [
+      "salhoy",
+      "brookaneer",
+      "cragsair"
+    ],
+    "stage": 1,
+    "maxStage": 3,
+    "parents": [],
+    "children": [],
+    "cry": "sounds/pokemon/salhoy.mp3",
+    "forms": {
+      "base": {
+        "name": "Salhoy",
+        "fullName": "Salhoy",
+        "types": [
+          "water"
+        ],
+        "image": "images/pokemon/salhoy.png",
+        "hasImage": true,
+        "formType": "base"
+      }
+    }
+  },
+  {
+    "dex": 10,
+    "speciesId": "generouse",
+    "name": "Generouse",
+    "family": [
+      "generouse",
+      "gaverden"
+    ],
+    "stage": 1,
+    "maxStage": 2,
+    "parents": [],
+    "children": [],
+    "cry": "sounds/pokemon/generouse.mp3",
+    "forms": {
+      "base": {
+        "name": "Generouse",
+        "fullName": "Generouse",
+        "types": [
+          "normal"
+        ],
+        "image": "images/pokemon/generouse.png",
+        "hasImage": true,
+        "formType": "base"
+      }
+    }
+  },
+  {
+    "dex": 12,
+    "speciesId": "reedwing",
+    "name": "Reedwing",
+    "family": [
+      "reedwing",
+      "skiveling",
+      "hivenante"
+    ],
+    "stage": 1,
+    "maxStage": 3,
+    "parents": [],
+    "children": [],
+    "cry": "sounds/pokemon/reedwing.mp3",
+    "forms": {
+      "base": {
+        "name": "Reedwing",
+        "fullName": "Reedwing",
+        "types": [
+          "bug"
+        ],
+        "image": "images/pokemon/reedwing.png",
+        "hasImage": true,
+        "formType": "base"
+      }
+    }
+  },
+  {
+    "dex": 16,
+    "speciesId": "azuruff",
+    "name": "Azuruff",
+    "family": [
+      "azuruff",
+      "sappherd"
+    ],
+    "stage": 1,
+    "maxStage": 2,
+    "parents": [],
+    "children": [],
+    "cry": "sounds/pokemon/azuruff.mp3",
+    "forms": {
+      "base": {
+        "name": "Azuruff",
+        "fullName": "Azuruff",
+        "types": [
+          "normal"
+        ],
+        "image": "images/pokemon/azuruff.png",
+        "hasImage": true,
+        "formType": "base"
+      }
+    }
+  },
+  {
+    "dex": 18,
+    "speciesId": "chicketeer",
+    "name": "Chicketeer",
+    "family": [
+      "chicketeer",
+      "fowliant"
+    ],
+    "stage": 1,
+    "maxStage": 2,
+    "parents": [],
+    "children": [],
+    "cry": "sounds/pokemon/chicketeer.mp3",
+    "forms": {
+      "base": {
+        "name": "Chicketeer",
+        "fullName": "Chicketeer",
+        "types": [
+          "normal",
+          "flying"
+        ],
+        "image": "images/pokemon/chicketeer.png",
+        "hasImage": true,
+        "formType": "base"
+      }
+    }
+  },
+  {
+    "dex": 20,
+    "speciesId": "bryopillar",
+    "name": "Bryopillar",
+    "family": [
+      "bryopillar",
+      "empreenoss"
+    ],
+    "stage": 1,
+    "maxStage": 2,
+    "parents": [],
+    "children": [],
+    "cry": "sounds/pokemon/bryopillar.mp3",
+    "forms": {
+      "base": {
+        "name": "Bryopillar",
+        "fullName": "Bryopillar",
+        "types": [
+          "grass",
+          "poison"
+        ],
+        "image": "images/pokemon/bryopillar.png",
+        "hasImage": true,
+        "formType": "base"
+      }
+    }
+  },
+  {
+    "dex": 22,
+    "speciesId": "primelight",
+    "name": "Primelight",
+    "family": [
+      "primelight"
+    ],
+    "stage": 1,
+    "maxStage": 1,
+    "parents": [],
+    "children": [],
+    "cry": "sounds/pokemon/primelight.mp3",
+    "forms": {
+      "base": {
+        "name": "Primelight",
+        "fullName": "Primelight",
+        "types": [
+          "electric",
+          "grass"
+        ],
+        "image": "images/pokemon/primelight.png",
+        "hasImage": true,
+        "formType": "base"
+      }
+    }
+  },
+  {
+    "dex": 26,
+    "speciesId": "vimivolt",
+    "name": "Vimivolt",
+    "family": [
+      "vimivolt",
+      "etheriwatt",
+      "serampere"
+    ],
+    "stage": 1,
+    "maxStage": 3,
+    "parents": [],
+    "children": [],
+    "cry": "sounds/pokemon/vimivolt.mp3",
+    "forms": {
+      "base": {
+        "name": "Vimivolt",
+        "fullName": "Vimivolt",
+        "types": [
+          "fairy",
+          "electric"
+        ],
+        "image": "images/pokemon/vimivolt.png",
+        "hasImage": true,
+        "formType": "base"
+      }
+    }
+  },
+  {
+    "dex": 29,
+    "speciesId": "spravian",
+    "name": "Spravian",
+    "family": [
+      "spravian",
+      "macabrev",
+      "phandaver"
+    ],
+    "stage": 1,
+    "maxStage": 3,
+    "parents": [],
+    "children": [],
+    "cry": "sounds/pokemon/spravian.mp3",
+    "forms": {
+      "base": {
+        "name": "Spravian",
+        "fullName": "Spravian",
+        "types": [
+          "ghost"
+        ],
+        "image": "images/pokemon/spravian.png",
+        "hasImage": true,
+        "formType": "base"
+      }
+    }
+  },
+  {
+    "dex": 32,
+    "speciesId": "blossool",
+    "name": "Blossool",
+    "family": [
+      "blossool"
+    ],
+    "stage": 1,
+    "maxStage": 1,
+    "parents": [],
+    "children": [],
+    "cry": "sounds/pokemon/blossool.mp3",
+    "forms": {
+      "base": {
+        "name": "Blossool",
+        "fullName": "Blossool",
+        "types": [
+          "normal",
+          "fairy"
+        ],
+        "image": "images/pokemon/blossool.png",
+        "hasImage": true,
+        "formType": "base"
+      }
+    }
+  },
+  {
+    "dex": 85,
+    "speciesId": "invalid",
+    "name": "Invalid",
+    "family": [
+      "invalid"
+    ],
+    "stage": 1,
+    "maxStage": 1,
+    "parents": [],
+    "children": [],
+    "cry": "sounds/pokemon/invalid.mp3",
+    "forms": {
+      "form-frozen": {
+        "name": "Invalid",
+        "fullName": "Invalid[Frozen]",
+        "types": [
+          "ice"
+        ],
+        "image": "images/pokemon/invalidfrozen.png",
+        "hasImage": true,
+        "formType": "cosmetic"
+      },
+      "form-thawed": {
+        "name": "Invalid",
+        "fullName": "Invalid[Thawed]",
+        "types": [
+          "rock",
+          "fire"
+        ],
+        "image": "images/pokemon/invalidthawed.png",
+        "hasImage": true,
+        "formType": "cosmetic"
+      },
+      "spiritbound": {
+        "name": "SB-Invalid",
+        "fullName": "SB-Invalid",
+        "types": [
+          "rock",
+          "fire",
+          "ice"
+        ],
+        "image": "images/pokemon/invalidsb.png",
+        "hasImage": true,
+        "formType": "spiritbound"
+      }
+    }
+  },
+  {
+    "dex": 88,
+    "speciesId": "effithread",
+    "name": "Effithread",
+    "family": [
+      "effithread"
+    ],
+    "stage": 1,
+    "maxStage": 1,
+    "parents": [],
+    "children": [],
+    "cry": "sounds/pokemon/effithread.mp3",
+    "forms": {
+      "base": {
+        "name": "Effithread",
+        "fullName": "Effithread",
+        "types": [
+          "normal",
+          "ghost"
+        ],
+        "image": "images/pokemon/effithread.png",
+        "hasImage": true,
+        "formType": "base"
+      }
+    }
+  },
+  {
+    "dex": 93,
+    "speciesId": "alupine",
+    "name": "Alupine",
+    "family": [
+      "timberwoof",
+      "alupine",
+      "alvu"
+    ],
+    "stage": 2,
+    "maxStage": 3,
+    "parents": [],
+    "children": [],
+    "cry": "sounds/pokemon/alupine.mp3",
+    "forms": {
+      "base": {
+        "name": "Alupine",
+        "fullName": "Alupine",
+        "types": [
+          "grass",
+          "normal"
+        ],
+        "image": "images/pokemon/alupine.png",
+        "hasImage": true,
+        "formType": "base"
+      }
+    }
+  },
+  {
+    "dex": 124,
+    "speciesId": "lumiora",
+    "name": "Lumiora",
+    "family": [
+      "lumiora",
+      "astravelle"
+    ],
+    "stage": 1,
+    "maxStage": 2,
+    "parents": [],
+    "children": [],
+    "cry": "sounds/pokemon/lumiora.mp3",
+    "forms": {
+      "form-south": {
+        "name": "Lumiora",
+        "fullName": "Lumiora[South]",
+        "types": [
+          "fairy",
+          "dragon"
+        ],
+        "image": "images/pokemon/lumiorasouth.png",
+        "hasImage": true,
+        "formType": "cosmetic"
+      },
+      "form-north": {
+        "name": "Lumiora",
+        "fullName": "Lumiora[North]",
+        "types": [
+          "fairy",
+          "fire"
+        ],
+        "image": "images/pokemon/lumioranorth.png",
+        "hasImage": true,
+        "formType": "cosmetic"
+      }
+    }
+  },
+  {
+    "dex": 144,
+    "speciesId": "daniel",
+    "name": "Daniel",
+    "family": [
+      "daniel",
+      "dave"
+    ],
+    "stage": 1,
+    "maxStage": 2,
+    "parents": [],
+    "children": [],
+    "cry": "sounds/pokemon/daniel.mp3",
+    "forms": {
+      "base": {
+        "name": "Daniel",
+        "fullName": "Daniel",
+        "types": [
+          "normal",
+          "fairy"
+        ],
+        "image": "images/pokemon/daniel.png",
+        "hasImage": true,
+        "formType": "base"
+      }
+    }
+  },
+  {
+    "dex": 145,
+    "speciesId": "dave",
+    "name": "Dave",
+    "family": [
+      "daniel",
+      "dave"
+    ],
+    "stage": 2,
+    "maxStage": 2,
+    "parents": [],
+    "children": [],
+    "cry": "sounds/pokemon/dave.mp3",
+    "forms": {
+      "base": {
+        "name": "Dave",
+        "fullName": "Dave",
+        "types": [
+          "normal",
+          "fairy"
+        ],
+        "image": "images/pokemon/dave.png",
+        "hasImage": true,
+        "formType": "base"
+      }
+    }
+  }
+];

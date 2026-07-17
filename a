@@ -1,0 +1,420 @@
+/* ================= GLOBAL ================= */
+
+body {
+  margin: 0;
+  font-family: 'Segoe UI', system-ui, sans-serif;
+  min-height: 100vh;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  color: white;
+
+  background:
+    radial-gradient(circle at 20% 20%, #1b2a4a, transparent 40%),
+    radial-gradient(circle at 80% 30%, #2b1b4a, transparent 45%),
+    radial-gradient(circle at 50% 80%, #0f3a3a, transparent 50%),
+    #0b0f17;
+
+  transition: background 0.25s ease, color 0.25s ease;
+}
+
+/* ================= DARK MODE ================= */
+
+body.dark {
+  background:
+    radial-gradient(circle at 20% 20%, #0f1724, transparent 40%),
+    radial-gradient(circle at 80% 30%, #120c1c, transparent 45%),
+    radial-gradient(circle at 50% 80%, #071010, transparent 50%),
+    #04060a;
+}
+
+/* ================= CARD ================= */
+
+.pokedex-card {
+  width: min(1600px, 98vw);
+  padding: 28px;
+
+  border-radius: 24px;
+
+  background: rgba(255,255,255,0.06);
+  backdrop-filter: blur(18px);
+
+  border: 1px solid rgba(255,255,255,0.12);
+
+  box-shadow:
+    0 20px 60px rgba(0,0,0,0.5),
+    inset 0 1px 0 rgba(255,255,255,0.08);
+
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+
+  overflow: hidden; /* 🔥 prevents global overflow leaks */
+}
+
+/* ================= LAYOUT ================= */
+
+.pokedex-layout {
+  display: grid;
+  grid-template-columns: 2.2fr 1fr 0.9fr;
+  gap: 28px;
+
+  width: 100%;
+  max-width: 1400px;
+  margin: 0 auto;
+
+  align-items: stretch;
+  overflow: hidden;
+}
+
+/* ================= PANELS ================= */
+
+.main-view,
+.control-panel,
+.favorites-panel {
+  background: rgba(255,255,255,0.05);
+  border: 1px solid rgba(255,255,255,0.08);
+  border-radius: 18px;
+  padding: 24px;
+
+  min-width: 0; /* 🔥 critical flex/grid fix */
+  overflow: hidden;
+}
+
+/* ================= FAVORITES PANEL ================= */
+
+.favorites-panel {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+
+  max-height: 80vh;
+  overflow-y: auto;
+
+  transition: transform 0.25s ease, opacity 0.25s ease;
+}
+
+.favorites-panel:not(.open) {
+  transform: translateX(110%);
+  opacity: 0;
+  pointer-events: none;
+}
+
+.favorites-panel.open {
+  transform: translateX(0);
+  opacity: 1;
+  pointer-events: auto;
+}
+
+/* ================= MAIN VIEW ================= */
+
+.main-view {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+/* ================= IMAGE ================= */
+
+.image-frame {
+  width: min(85vw, 680px);
+  aspect-ratio: 4 / 3;
+
+  border-radius: 18px;
+
+  background:
+    radial-gradient(circle at 30% 30%, rgba(0,255,255,0.08), transparent 60%),
+    rgba(255,255,255,0.04);
+
+  border: 1px solid rgba(0,255,255,0.15);
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  overflow: hidden;
+}
+
+.pokemon-image {
+  max-width: 100%;
+  max-height: 100%;
+  object-fit: contain;
+}
+
+/* ================= TEXT ================= */
+
+.number {
+  font-size: 18px;
+  color: rgba(255,255,255,0.5);
+  margin-bottom: 2px;
+  transition: color 0.2s ease;
+}
+
+/* ⭐ FIX: gold favorite always applies cleanly */
+.number.favorite {
+  color: gold !important;
+  text-shadow: 0 0 10px rgba(255, 215, 0, 0.6);
+}
+
+.name {
+  font-size: 56px;
+  font-weight: 800;
+
+  margin-top: -6px;
+  margin-bottom: 14px;
+
+  background: linear-gradient(90deg,#7df9ff,#b56cff);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+
+  line-height: 1.05;
+}
+
+/* ================= TYPES ================= */
+
+.types {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 10px;
+}
+
+.type {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  gap: 6px;
+  padding: 6px 10px;
+  border-radius: 999px;
+
+  font-weight: bold;
+  font-size: 12px;
+
+  color: white;
+  text-shadow: 0 1px 2px rgba(0,0,0,0.6);
+
+  white-space: nowrap;
+}
+
+.type-icon {
+  width: 18px;
+  height: 18px;
+  object-fit: contain;
+}
+
+/* TYPE COLORS */
+.normal { background:#9da0a2; }
+.fire { background:#f4313f; }
+.water { background:#00b2e2; }
+.electric { background:#e0cc00; }
+.grass { background:#00ae41; }
+.ice { background:#82dade; }
+.fighting { background:#d79a2a; }
+.poison { background:#a77bc8; }
+.ground { background:#ca8241; }
+.flying { background:#56b3e4; }
+.psychic { background:#f67eb4; }
+.bug { background:#a8c27e; }
+.rock { background:#8b8179; }
+.ghost { background:#a67db1; }
+.dragon { background:#0083ae; }
+.dark { background:#5a6771; }
+.steel { background:#979899; }
+.fairy { background:#f3b1db; }
+.mystery { background:#3f1d33; }
+
+/* ================= EVOLUTION ================= */
+
+.evolution-tree {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  justify-content: center;
+  align-items: center;
+
+  max-width: 100%;
+  overflow: hidden;
+}
+
+.evo-item {
+  background: rgba(255,255,255,0.08);
+  border: 1px solid rgba(255,255,255,0.18);
+  border-radius: 12px;
+
+  padding: 6px 10px;
+  cursor: pointer;
+
+  font-size: 13px;
+  color: white;
+
+  transition: 0.15s ease;
+
+  max-width: 100%;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.evo-item:hover {
+  background: rgba(0,255,255,0.15);
+  border-color: rgba(0,255,255,0.35);
+}
+
+.evo-arrow {
+  color: rgba(255,255,255,0.65);
+  font-weight: bold;
+}
+
+/* ================= STAGE ================= */
+
+#stageLabel {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  margin: 10px auto;
+  padding: 5px 12px;
+
+  border-radius: 999px;
+  min-width: 100px;
+
+  font-weight: 600;
+}
+
+#stageLabel[data-stage="single"] { background:#1876f0; }
+#stageLabel[data-stage="first"] { background:#6edc49; color:#0b0f17; }
+#stageLabel[data-stage="middle"] { background:#f3ca52; color:#0b0f17; }
+#stageLabel[data-stage="final"] { background:#ea5353; }
+#stageLabel[data-stage="spiritbound"] { background:#703151; }
+
+/* ================= BUTTONS ================= */
+
+button {
+  padding: 10px 14px;
+  border-radius: 12px;
+
+  background: rgba(255,255,255,0.08);
+  border: 1px solid rgba(255,255,255,0.12);
+
+  color: white;
+  cursor: pointer;
+
+  transition: 0.2s ease;
+}
+
+button:hover {
+  background: rgba(0,255,255,0.12);
+  border-color: rgba(0,255,255,0.25);
+}
+
+button:active {
+  transform: scale(0.97);
+}
+
+/* ================= CONTROL PANEL ================= */
+
+.control-panel {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+
+  min-width: 0;
+  overflow: hidden; /* 🔥 prevents team overflow */
+}
+
+.control-panel > * {
+  width: 100%;
+  max-width: 100%;
+  box-sizing: border-box;
+}
+
+/* ================= NAV ================= */
+
+.nav,
+.nav.controls {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+
+  justify-content: center;
+  align-items: center;
+
+  width: 100%;
+  max-width: 100%;
+  box-sizing: border-box;
+}
+
+/* ================= SEARCH ================= */
+
+.search-wrapper {
+  width: 100%;
+  min-width: 0;
+}
+
+#searchInput {
+  width: 100%;
+  box-sizing: border-box;
+}
+
+/* ================= INPUTS ================= */
+
+input,
+select {
+  width: 100%;
+  box-sizing: border-box;
+
+  padding: 12px 14px;
+  border-radius: 14px;
+
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.10);
+
+  color: white;
+  font-size: 14px;
+
+  text-align: center;
+}
+
+/* ================= TEAM (FIXED OVERFLOW) ================= */
+
+.trainer-card {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 10px;
+
+  width: 100%;
+  max-width: 100%;
+  box-sizing: border-box;
+}
+
+.team-slot {
+  background: rgba(255,255,255,0.06);
+  border: 1px solid rgba(255,255,255,0.12);
+  border-radius: 12px;
+
+  padding: 10px;
+  cursor: pointer;
+
+  text-align: center;
+
+  min-width: 0;
+  overflow: hidden;
+  word-break: break-word;
+}
+
+/* ================= MOBILE ================= */
+
+@media (max-width: 600px) {
+  .name {
+    font-size: 36px;
+  }
+
+  .trainer-card {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}

@@ -1,0 +1,4519 @@
+export const pokedex = [
+  {
+    "dex": 1,
+    "speciesId": "kakalil",
+    "name": "Kakalil",
+    "stage": 1,
+    "maxStage": 3,
+    "family": [
+      "kakalil",
+      "fronglow",
+      "verdalete"
+    ],
+    "parents": [],
+    "children": [
+      "fronglow"
+    ],
+    "cry": "sounds/pokemon/kakalil.mp3",
+    "forms": {
+      "base": {
+        "name": "Kakalil",
+        "fullName": "Kakalil",
+        "types": [
+          "grass"
+        ],
+        "image": "images/pokemon/kakalil.png",
+        "formType": "base"
+      }
+    }
+  },
+  {
+    "dex": 2,
+    "speciesId": "fronglow",
+    "name": "Fronglow",
+    "stage": 2,
+    "maxStage": 3,
+    "family": [
+      "kakalil",
+      "fronglow",
+      "verdalete"
+    ],
+    "parents": [
+      "kakalil"
+    ],
+    "children": [
+      "verdalete"
+    ],
+    "cry": "sounds/pokemon/fronglow.mp3",
+    "forms": {
+      "base": {
+        "name": "Fronglow",
+        "fullName": "Fronglow",
+        "types": [
+          "grass"
+        ],
+        "image": "images/pokemon/fronglow.png",
+        "formType": "base"
+      }
+    }
+  },
+  {
+    "dex": 3,
+    "speciesId": "verdalete",
+    "name": "Verdalete",
+    "stage": 3,
+    "maxStage": 3,
+    "family": [
+      "kakalil",
+      "fronglow",
+      "verdalete"
+    ],
+    "parents": [
+      "fronglow"
+    ],
+    "children": [],
+    "cry": "sounds/pokemon/verdalete.mp3",
+    "forms": {
+      "base": {
+        "name": "Verdalete",
+        "fullName": "Verdalete",
+        "types": [
+          "grass",
+          "fighting"
+        ],
+        "image": "images/pokemon/verdalete.png",
+        "formType": "base"
+      },
+      "spiritbound": {
+        "name": "SB-Verdalete",
+        "fullName": "SB-Verdalete",
+        "types": [
+          "grass",
+          "fighting",
+          "ground"
+        ],
+        "image": "images/pokemon/verdalete.png",
+        "formType": "gimmick"
+      }
+    }
+  },
+  {
+    "dex": 4,
+    "speciesId": "scorchirp",
+    "name": "Scorchirp",
+    "stage": 1,
+    "maxStage": 3,
+    "family": [
+      "scorchirp",
+      "pyrill",
+      "reviling"
+    ],
+    "parents": [],
+    "children": [
+      "pyrill"
+    ],
+    "cry": "sounds/pokemon/scorchirp.mp3",
+    "forms": {
+      "base": {
+        "name": "Scorchirp",
+        "fullName": "Scorchirp",
+        "types": [
+          "fire"
+        ],
+        "image": "images/pokemon/scorchirp.png",
+        "formType": "base"
+      }
+    }
+  },
+  {
+    "dex": 5,
+    "speciesId": "pyrill",
+    "name": "Pyrill",
+    "stage": 2,
+    "maxStage": 3,
+    "family": [
+      "scorchirp",
+      "pyrill",
+      "reviling"
+    ],
+    "parents": [
+      "scorchirp"
+    ],
+    "children": [
+      "reviling"
+    ],
+    "cry": "sounds/pokemon/pyrill.mp3",
+    "forms": {
+      "base": {
+        "name": "Pyrill",
+        "fullName": "Pyrill",
+        "types": [
+          "fire"
+        ],
+        "image": "images/pokemon/pyrill.png",
+        "formType": "base"
+      }
+    }
+  },
+  {
+    "dex": 6,
+    "speciesId": "reviling",
+    "name": "Reviling",
+    "stage": 3,
+    "maxStage": 3,
+    "family": [
+      "scorchirp",
+      "pyrill",
+      "reviling"
+    ],
+    "parents": [
+      "pyrill"
+    ],
+    "children": [],
+    "cry": "sounds/pokemon/reviling.mp3",
+    "forms": {
+      "base": {
+        "name": "Reviling",
+        "fullName": "Reviling",
+        "types": [
+          "fire",
+          "flying"
+        ],
+        "image": "images/pokemon/reviling.png",
+        "formType": "base"
+      },
+      "spiritbound": {
+        "name": "SB-Reviling",
+        "fullName": "SB-Reviling",
+        "types": [
+          "fire",
+          "flying",
+          "ghost"
+        ],
+        "image": "images/pokemon/reviling.png",
+        "formType": "gimmick"
+      }
+    }
+  },
+  {
+    "dex": 7,
+    "speciesId": "salhoy",
+    "name": "Salhoy",
+    "stage": 1,
+    "maxStage": 3,
+    "family": [
+      "salhoy",
+      "brookaneer",
+      "cragsair"
+    ],
+    "parents": [],
+    "children": [
+      "brookaneer"
+    ],
+    "cry": "sounds/pokemon/salhoy.mp3",
+    "forms": {
+      "base": {
+        "name": "Salhoy",
+        "fullName": "Salhoy",
+        "types": [
+          "water"
+        ],
+        "image": "images/pokemon/salhoy.png",
+        "formType": "base"
+      }
+    }
+  },
+  {
+    "dex": 8,
+    "speciesId": "brookaneer",
+    "name": "Brookaneer",
+    "stage": 2,
+    "maxStage": 3,
+    "family": [
+      "salhoy",
+      "brookaneer",
+      "cragsair"
+    ],
+    "parents": [
+      "salhoy"
+    ],
+    "children": [
+      "cragsair"
+    ],
+    "cry": "sounds/pokemon/brookaneer.mp3",
+    "forms": {
+      "base": {
+        "name": "Brookaneer",
+        "fullName": "Brookaneer",
+        "types": [
+          "water"
+        ],
+        "image": "images/pokemon/brookaneer.png",
+        "formType": "base"
+      }
+    }
+  },
+  {
+    "dex": 9,
+    "speciesId": "cragsair",
+    "name": "Cragsair",
+    "stage": 3,
+    "maxStage": 3,
+    "family": [
+      "salhoy",
+      "brookaneer",
+      "cragsair"
+    ],
+    "parents": [
+      "brookaneer"
+    ],
+    "children": [],
+    "cry": "sounds/pokemon/cragsair.mp3",
+    "forms": {
+      "base": {
+        "name": "Cragsair",
+        "fullName": "Cragsair",
+        "types": [
+          "water",
+          "rock"
+        ],
+        "image": "images/pokemon/cragsair.png",
+        "formType": "base"
+      },
+      "spiritbound": {
+        "name": "SB-Cragsair",
+        "fullName": "SB-Cragsair",
+        "types": [
+          "water",
+          "rock",
+          "ice"
+        ],
+        "image": "images/pokemon/cragsair.png",
+        "formType": "gimmick"
+      }
+    }
+  },
+  {
+    "dex": 10,
+    "speciesId": "generouse",
+    "name": "Generouse",
+    "stage": 1,
+    "maxStage": 2,
+    "family": [
+      "generouse",
+      "gaverden"
+    ],
+    "parents": [],
+    "children": [
+      "gaverden"
+    ],
+    "cry": "sounds/pokemon/generouse.mp3",
+    "forms": {
+      "base": {
+        "name": "Generouse",
+        "fullName": "Generouse",
+        "types": [
+          "normal"
+        ],
+        "image": "images/pokemon/generouse.png",
+        "formType": "base"
+      }
+    }
+  },
+  {
+    "dex": 11,
+    "speciesId": "gaverden",
+    "name": "Gaverden",
+    "stage": 2,
+    "maxStage": 2,
+    "family": [
+      "generouse",
+      "gaverden"
+    ],
+    "parents": [
+      "generouse"
+    ],
+    "children": [],
+    "cry": "sounds/pokemon/gaverden.mp3",
+    "forms": {
+      "base": {
+        "name": "Gaverden",
+        "fullName": "Gaverden",
+        "types": [
+          "normal",
+          "grass"
+        ],
+        "image": "images/pokemon/gaverden.png",
+        "formType": "base"
+      },
+      "spiritbound": {
+        "name": "SB-Gaverden",
+        "fullName": "SB-Gaverden",
+        "types": [
+          "normal",
+          "grass",
+          "fire"
+        ],
+        "image": "images/pokemon/gaverden.png",
+        "formType": "gimmick"
+      }
+    }
+  },
+  {
+    "dex": 12,
+    "speciesId": "reedwing",
+    "name": "Reedwing",
+    "stage": 1,
+    "maxStage": 3,
+    "family": [
+      "reedwing",
+      "skiveling",
+      "hivenante"
+    ],
+    "parents": [],
+    "children": [
+      "skiveling"
+    ],
+    "cry": "sounds/pokemon/reedwing.mp3",
+    "forms": {
+      "base": {
+        "name": "Reedwing",
+        "fullName": "Reedwing",
+        "types": [
+          "bug"
+        ],
+        "image": "images/pokemon/reedwing.png",
+        "formType": "base"
+      }
+    }
+  },
+  {
+    "dex": 13,
+    "speciesId": "skiveling",
+    "name": "Skiveling",
+    "stage": 2,
+    "maxStage": 3,
+    "family": [
+      "reedwing",
+      "skiveling",
+      "hivenante"
+    ],
+    "parents": [
+      "reedwing"
+    ],
+    "children": [
+      "hivenante",
+      "myrtaburreau"
+    ],
+    "cry": "sounds/pokemon/skiveling.mp3",
+    "forms": {
+      "base": {
+        "name": "Skiveling",
+        "fullName": "Skiveling",
+        "types": [
+          "bug"
+        ],
+        "image": "images/pokemon/skiveling.png",
+        "formType": "base"
+      }
+    }
+  },
+  {
+    "dex": 14,
+    "speciesId": "hivenante",
+    "name": "Hivenante",
+    "stage": 3,
+    "maxStage": 3,
+    "family": [
+      "reedwing",
+      "skiveling",
+      "hivenante"
+    ],
+    "parents": [
+      "skiveling"
+    ],
+    "children": [],
+    "cry": "sounds/pokemon/hivenante.mp3",
+    "forms": {
+      "base": {
+        "name": "Hivenante",
+        "fullName": "Hivenante",
+        "types": [
+          "bug",
+          "flying"
+        ],
+        "image": "images/pokemon/hivenante.png",
+        "formType": "base"
+      },
+      "spiritbound": {
+        "name": "SB-Hivenante",
+        "fullName": "SB-Hivenante",
+        "types": [
+          "bug",
+          "flying",
+          "dragon"
+        ],
+        "image": "images/pokemon/hivenante.png",
+        "formType": "gimmick"
+      }
+    }
+  },
+  {
+    "dex": 15,
+    "speciesId": "myrtaburreau",
+    "name": "Myrtaburreau",
+    "stage": 3,
+    "maxStage": 3,
+    "family": [
+      "reedwing",
+      "skiveling",
+      "myrtaburreau"
+    ],
+    "parents": [
+      "skiveling"
+    ],
+    "children": [],
+    "cry": "sounds/pokemon/myrtaburreau.mp3",
+    "forms": {
+      "base": {
+        "name": "Myrtaburreau",
+        "fullName": "Myrtaburreau",
+        "types": [
+          "bug",
+          "ground"
+        ],
+        "image": "images/pokemon/myrtaburreau.png",
+        "formType": "base"
+      },
+      "spiritbound": {
+        "name": "SB-Myrtaburreau",
+        "fullName": "SB-Myrtaburreau",
+        "types": [
+          "bug",
+          "ground",
+          "dragon"
+        ],
+        "image": "images/pokemon/myrtaburreau.png",
+        "formType": "gimmick"
+      }
+    }
+  },
+  {
+    "dex": 16,
+    "speciesId": "azuruff",
+    "name": "Azuruff",
+    "stage": 1,
+    "maxStage": 2,
+    "family": [
+      "azuruff",
+      "sappherd"
+    ],
+    "parents": [],
+    "children": [
+      "sappherd"
+    ],
+    "cry": "sounds/pokemon/azuruff.mp3",
+    "forms": {
+      "base": {
+        "name": "Azuruff",
+        "fullName": "Azuruff",
+        "types": [
+          "normal"
+        ],
+        "image": "images/pokemon/azuruff.png",
+        "formType": "base"
+      }
+    }
+  },
+  {
+    "dex": 17,
+    "speciesId": "sappherd",
+    "name": "Sappherd",
+    "stage": 2,
+    "maxStage": 2,
+    "family": [
+      "azuruff",
+      "sappherd"
+    ],
+    "parents": [
+      "azuruff"
+    ],
+    "children": [],
+    "cry": "sounds/pokemon/sappherd.mp3",
+    "forms": {
+      "base": {
+        "name": "Sappherd",
+        "fullName": "Sappherd",
+        "types": [
+          "normal",
+          "fighting"
+        ],
+        "image": "images/pokemon/sappherd.png",
+        "formType": "base"
+      },
+      "spiritbound": {
+        "name": "SB-Sappherd",
+        "fullName": "SB-Sappherd",
+        "types": [
+          "normal",
+          "fighting",
+          "rock"
+        ],
+        "image": "images/pokemon/sappherd.png",
+        "formType": "gimmick"
+      }
+    }
+  },
+  {
+    "dex": 18,
+    "speciesId": "chicketeer",
+    "name": "Chicketeer",
+    "stage": 1,
+    "maxStage": 2,
+    "family": [
+      "chicketeer",
+      "fowliant"
+    ],
+    "parents": [],
+    "children": [
+      "fowliant"
+    ],
+    "cry": "sounds/pokemon/chicketeer.mp3",
+    "forms": {
+      "base": {
+        "name": "Chicketeer",
+        "fullName": "Chicketeer",
+        "types": [
+          "normal",
+          "flying"
+        ],
+        "image": "images/pokemon/chicketeer.png",
+        "formType": "base"
+      }
+    }
+  },
+  {
+    "dex": 19,
+    "speciesId": "fowliant",
+    "name": "Fowliant",
+    "stage": 2,
+    "maxStage": 2,
+    "family": [
+      "chicketeer",
+      "fowliant"
+    ],
+    "parents": [
+      "chicketeer"
+    ],
+    "children": [],
+    "cry": "sounds/pokemon/fowliant.mp3",
+    "forms": {
+      "base": {
+        "name": "Fowliant",
+        "fullName": "Fowliant",
+        "types": [
+          "normal",
+          "flying"
+        ],
+        "image": "images/pokemon/fowliant.png",
+        "formType": "base"
+      }
+    }
+  },
+  {
+    "dex": 20,
+    "speciesId": "bryopillar",
+    "name": "Bryopillar",
+    "stage": 1,
+    "maxStage": 2,
+    "family": [
+      "bryopillar",
+      "empreenoss"
+    ],
+    "parents": [],
+    "children": [
+      "empreenoss"
+    ],
+    "cry": "sounds/pokemon/bryopillar.mp3",
+    "forms": {
+      "base": {
+        "name": "Bryopillar",
+        "fullName": "Bryopillar",
+        "types": [
+          "grass",
+          "poison"
+        ],
+        "image": "images/pokemon/bryopillar.png",
+        "formType": "base"
+      }
+    }
+  },
+  {
+    "dex": 21,
+    "speciesId": "empreenoss",
+    "name": "Empreenoss",
+    "stage": 2,
+    "maxStage": 2,
+    "family": [
+      "bryopillar",
+      "empreenoss"
+    ],
+    "parents": [
+      "bryopillar"
+    ],
+    "children": [],
+    "cry": "sounds/pokemon/empreenoss.mp3",
+    "forms": {
+      "base": {
+        "name": "Empreenoss",
+        "fullName": "Empreenoss",
+        "types": [
+          "grass",
+          "poison"
+        ],
+        "image": "images/pokemon/empreenoss.png",
+        "formType": "base"
+      },
+      "spiritbound": {
+        "name": "SB-Empreenoss",
+        "fullName": "SB-Empreenoss",
+        "types": [
+          "grass",
+          "poison",
+          "bug"
+        ],
+        "image": "images/pokemon/empreenoss.png",
+        "formType": "gimmick"
+      }
+    }
+  },
+  {
+    "dex": 22,
+    "speciesId": "primelight",
+    "name": "Primelight",
+    "stage": 1,
+    "maxStage": 1,
+    "family": [
+      "primelight"
+    ],
+    "parents": [],
+    "children": [],
+    "cry": "sounds/pokemon/primelight.mp3",
+    "forms": {
+      "base": {
+        "name": "Primelight",
+        "fullName": "Primelight",
+        "types": [
+          "electric",
+          "grass"
+        ],
+        "image": "images/pokemon/primelight.png",
+        "formType": "base"
+      }
+    }
+  },
+  {
+    "dex": 23,
+    "speciesId": "marginip",
+    "name": "Marginip",
+    "stage": 1,
+    "maxStage": 3,
+    "family": [
+      "marginip",
+      "lexifold",
+      "orthoracle"
+    ],
+    "parents": [],
+    "children": [
+      "lexifold"
+    ],
+    "cry": "sounds/pokemon/marginip.mp3",
+    "forms": {
+      "base": {
+        "name": "Marginip",
+        "fullName": "Marginip",
+        "types": [
+          "psychic"
+        ],
+        "image": "images/pokemon/marginip.png",
+        "formType": "base"
+      }
+    }
+  },
+  {
+    "dex": 24,
+    "speciesId": "lexifold",
+    "name": "Lexifold",
+    "stage": 2,
+    "maxStage": 3,
+    "family": [
+      "marginip",
+      "lexifold",
+      "orthoracle"
+    ],
+    "parents": [
+      "marginip"
+    ],
+    "children": [
+      "orthoracle"
+    ],
+    "cry": "sounds/pokemon/lexifold.mp3",
+    "forms": {
+      "base": {
+        "name": "Lexifold",
+        "fullName": "Lexifold",
+        "types": [
+          "psychic"
+        ],
+        "image": "images/pokemon/lexifold.png",
+        "formType": "base"
+      }
+    }
+  },
+  {
+    "dex": 25,
+    "speciesId": "orthoracle",
+    "name": "Orthoracle",
+    "stage": 3,
+    "maxStage": 3,
+    "family": [
+      "marginip",
+      "lexifold",
+      "orthoracle"
+    ],
+    "parents": [
+      "lexifold"
+    ],
+    "children": [],
+    "cry": "sounds/pokemon/orthoracle.mp3",
+    "forms": {
+      "base": {
+        "name": "Orthoracle",
+        "fullName": "Orthoracle",
+        "types": [
+          "psychic",
+          "steel"
+        ],
+        "image": "images/pokemon/orthoracle.png",
+        "formType": "base"
+      },
+      "spiritbound": {
+        "name": "SB-Orthoracle",
+        "fullName": "SB-Orthoracle",
+        "types": [
+          "psychic",
+          "steel",
+          "grass"
+        ],
+        "image": "images/pokemon/orthoracle.png",
+        "formType": "gimmick"
+      }
+    }
+  },
+  {
+    "dex": 26,
+    "speciesId": "vimivolt",
+    "name": "Vimivolt",
+    "stage": 1,
+    "maxStage": 3,
+    "family": [
+      "vimivolt",
+      "etheriwatt",
+      "serampere"
+    ],
+    "parents": [],
+    "children": [
+      "etheriwatt"
+    ],
+    "cry": "sounds/pokemon/vimivolt.mp3",
+    "forms": {
+      "base": {
+        "name": "Vimivolt",
+        "fullName": "Vimivolt",
+        "types": [
+          "fairy",
+          "electric"
+        ],
+        "image": "images/pokemon/vimivolt.png",
+        "formType": "base"
+      }
+    }
+  },
+  {
+    "dex": 27,
+    "speciesId": "etheriwatt",
+    "name": "Etheriwatt",
+    "stage": 2,
+    "maxStage": 3,
+    "family": [
+      "vimivolt",
+      "etheriwatt",
+      "serampere"
+    ],
+    "parents": [
+      "vimivolt"
+    ],
+    "children": [
+      "serampere"
+    ],
+    "cry": "sounds/pokemon/etheriwatt.mp3",
+    "forms": {
+      "base": {
+        "name": "Etheriwatt",
+        "fullName": "Etheriwatt",
+        "types": [
+          "fairy",
+          "electric"
+        ],
+        "image": "images/pokemon/etheriwatt.png",
+        "formType": "base"
+      }
+    }
+  },
+  {
+    "dex": 28,
+    "speciesId": "serampere",
+    "name": "Serampere",
+    "stage": 3,
+    "maxStage": 3,
+    "family": [
+      "vimivolt",
+      "etheriwatt",
+      "serampere"
+    ],
+    "parents": [
+      "etheriwatt"
+    ],
+    "children": [],
+    "cry": "sounds/pokemon/serampere.mp3",
+    "forms": {
+      "base": {
+        "name": "Serampere",
+        "fullName": "Serampere",
+        "types": [
+          "fairy",
+          "electric"
+        ],
+        "image": "images/pokemon/serampere.png",
+        "formType": "base"
+      },
+      "spiritbound": {
+        "name": "SB-Serampere",
+        "fullName": "SB-Serampere",
+        "types": [
+          "fairy",
+          "electric",
+          "flying"
+        ],
+        "image": "images/pokemon/serampere.png",
+        "formType": "gimmick"
+      }
+    }
+  },
+  {
+    "dex": 29,
+    "speciesId": "spravian",
+    "name": "Spravian",
+    "stage": 1,
+    "maxStage": 3,
+    "family": [
+      "spravian",
+      "macabrev",
+      "phandaver"
+    ],
+    "parents": [],
+    "children": [
+      "macabrev"
+    ],
+    "cry": "sounds/pokemon/spravian.mp3",
+    "forms": {
+      "base": {
+        "name": "Spravian",
+        "fullName": "Spravian",
+        "types": [
+          "ghost"
+        ],
+        "image": "images/pokemon/spravian.png",
+        "formType": "base"
+      }
+    }
+  },
+  {
+    "dex": 30,
+    "speciesId": "macabrev",
+    "name": "Macabrev",
+    "stage": 2,
+    "maxStage": 3,
+    "family": [
+      "spravian",
+      "macabrev",
+      "phandaver"
+    ],
+    "parents": [
+      "spravian"
+    ],
+    "children": [
+      "phandaver"
+    ],
+    "cry": "sounds/pokemon/macabrev.mp3",
+    "forms": {
+      "base": {
+        "name": "Macabrev",
+        "fullName": "Macabrev",
+        "types": [
+          "ghost"
+        ],
+        "image": "images/pokemon/macabrev.png",
+        "formType": "base"
+      }
+    }
+  },
+  {
+    "dex": 31,
+    "speciesId": "phandaver",
+    "name": "Phandaver",
+    "stage": 3,
+    "maxStage": 3,
+    "family": [
+      "spravian",
+      "macabrev",
+      "phandaver"
+    ],
+    "parents": [
+      "macabrev"
+    ],
+    "children": [],
+    "cry": "sounds/pokemon/phandaver.mp3",
+    "forms": {
+      "base": {
+        "name": "Phandaver",
+        "fullName": "Phandaver",
+        "types": [
+          "ghost",
+          "flying"
+        ],
+        "image": "images/pokemon/phandaver.png",
+        "formType": "base"
+      },
+      "spiritbound": {
+        "name": "SB-Phandaver",
+        "fullName": "SB-Phandaver",
+        "types": [
+          "ghost",
+          "flying",
+          "ice"
+        ],
+        "image": "images/pokemon/phandaver.png",
+        "formType": "gimmick"
+      }
+    }
+  },
+  {
+    "dex": 32,
+    "speciesId": "blossool",
+    "name": "Blossool",
+    "stage": 1,
+    "maxStage": 1,
+    "family": [
+      "blossool"
+    ],
+    "parents": [],
+    "children": [],
+    "cry": "sounds/pokemon/blossool.mp3",
+    "forms": {
+      "base": {
+        "name": "Blossool",
+        "fullName": "Blossool",
+        "types": [
+          "normal",
+          "fairy"
+        ],
+        "image": "images/pokemon/blossool.png",
+        "formType": "base"
+      }
+    }
+  },
+  {
+    "dex": 33,
+    "speciesId": "walmart",
+    "name": "Walmart",
+    "stage": 1,
+    "maxStage": 1,
+    "family": [
+      "walmart"
+    ],
+    "parents": [],
+    "children": [],
+    "cry": "sounds/pokemon/walmart.mp3",
+    "forms": {
+      "base": {
+        "name": "Walmart",
+        "fullName": "Walmart",
+        "types": [
+          "bug"
+        ],
+        "image": "images/pokemon/walmart.png",
+        "formType": "base"
+      }
+    }
+  },
+  {
+    "dex": 34,
+    "speciesId": "koinflip",
+    "name": "Koinflip",
+    "stage": 1,
+    "maxStage": 1,
+    "family": [
+      "koinflip"
+    ],
+    "parents": [],
+    "children": [],
+    "cry": "sounds/pokemon/koinflip.mp3",
+    "forms": {
+      "base": {
+        "name": "Koinflip",
+        "fullName": "Koinflip",
+        "types": [
+          "water"
+        ],
+        "image": "images/pokemon/koinflip.png",
+        "formType": "base"
+      }
+    }
+  },
+  {
+    "dex": 35,
+    "speciesId": "dwebble",
+    "name": "Y-Dwebble",
+    "stage": 1,
+    "maxStage": 2,
+    "family": [
+      "dwebble",
+      "crustle"
+    ],
+    "parents": [],
+    "children": [
+      "crustle"
+    ],
+    "cry": "sounds/pokemon/dwebble.mp3",
+    "forms": {
+      "base": {
+        "name": "Y-Dwebble",
+        "fullName": "Y-Dwebble",
+        "types": [
+          "water",
+          "bug"
+        ],
+        "image": "images/pokemon/dwebble.png",
+        "formType": "base"
+      }
+    }
+  },
+  {
+    "dex": 36,
+    "speciesId": "crustle",
+    "name": "Y-Crustle",
+    "stage": 2,
+    "maxStage": 2,
+    "family": [
+      "dwebble",
+      "crustle"
+    ],
+    "parents": [
+      "dwebble"
+    ],
+    "children": [],
+    "cry": "sounds/pokemon/crustle.mp3",
+    "forms": {
+      "base": {
+        "name": "Y-Crustle",
+        "fullName": "Y-Crustle",
+        "types": [
+          "water",
+          "rock"
+        ],
+        "image": "images/pokemon/crustle.png",
+        "formType": "base"
+      }
+    }
+  },
+  {
+    "dex": 37,
+    "speciesId": "harold1",
+    "name": "Harold1",
+    "stage": 1,
+    "maxStage": 3,
+    "family": [
+      "harold1",
+      "harold2",
+      "harold3"
+    ],
+    "parents": [],
+    "children": [
+      "harold2"
+    ],
+    "cry": "sounds/pokemon/harold1.mp3",
+    "forms": {
+      "base": {
+        "name": "Harold1",
+        "fullName": "Harold1",
+        "types": [
+          "bug"
+        ],
+        "image": "images/pokemon/harold1.png",
+        "formType": "base"
+      }
+    }
+  },
+  {
+    "dex": 38,
+    "speciesId": "harold2",
+    "name": "Harold2",
+    "stage": 2,
+    "maxStage": 3,
+    "family": [
+      "harold1",
+      "harold2",
+      "harold3"
+    ],
+    "parents": [
+      "harold1"
+    ],
+    "children": [
+      "harold3"
+    ],
+    "cry": "sounds/pokemon/harold2.mp3",
+    "forms": {
+      "base": {
+        "name": "Harold2",
+        "fullName": "Harold2",
+        "types": [
+          "bug"
+        ],
+        "image": "images/pokemon/harold2.png",
+        "formType": "base"
+      }
+    }
+  },
+  {
+    "dex": 39,
+    "speciesId": "harold3",
+    "name": "Harold3",
+    "stage": 3,
+    "maxStage": 3,
+    "family": [
+      "harold1",
+      "harold2",
+      "harold3"
+    ],
+    "parents": [
+      "harold2"
+    ],
+    "children": [],
+    "cry": "sounds/pokemon/harold3.mp3",
+    "forms": {
+      "base": {
+        "name": "Harold3",
+        "fullName": "Harold3",
+        "types": [
+          "bug"
+        ],
+        "image": "images/pokemon/harold3.png",
+        "formType": "base"
+      }
+    }
+  },
+  {
+    "dex": 40,
+    "speciesId": "wispark",
+    "name": "Wispark",
+    "stage": 1,
+    "maxStage": 2,
+    "family": [
+      "wispark",
+      "sorserous"
+    ],
+    "parents": [],
+    "children": [
+      "sorserous"
+    ],
+    "cry": "sounds/pokemon/wispark.mp3",
+    "forms": {
+      "base": {
+        "name": "Wispark",
+        "fullName": "Wispark",
+        "types": [
+          "dark",
+          "electric"
+        ],
+        "image": "images/pokemon/wispark.png",
+        "formType": "base"
+      }
+    }
+  },
+  {
+    "dex": 41,
+    "speciesId": "sorserous",
+    "name": "Sorserous",
+    "stage": 2,
+    "maxStage": 2,
+    "family": [
+      "wispark",
+      "sorserous"
+    ],
+    "parents": [
+      "wispark"
+    ],
+    "children": [],
+    "cry": "sounds/pokemon/sorserous.mp3",
+    "forms": {
+      "base": {
+        "name": "Sorserous",
+        "fullName": "Sorserous",
+        "types": [
+          "dark",
+          "electric"
+        ],
+        "image": "images/pokemon/sorserous.png",
+        "formType": "base"
+      }
+    }
+  },
+  {
+    "dex": 42,
+    "speciesId": "skiddo",
+    "name": "Y-Skiddo",
+    "stage": 1,
+    "maxStage": 2,
+    "family": [
+      "skiddo",
+      "gogoat"
+    ],
+    "parents": [],
+    "children": [
+      "gogoat"
+    ],
+    "cry": "sounds/pokemon/skiddo.mp3",
+    "forms": {
+      "base": {
+        "name": "Y-Skiddo",
+        "fullName": "Y-Skiddo",
+        "types": [
+          "ground"
+        ],
+        "image": "images/pokemon/skiddo.png",
+        "formType": "base"
+      }
+    }
+  },
+  {
+    "dex": 43,
+    "speciesId": "gogoat",
+    "name": "Y-Gogoat",
+    "stage": 2,
+    "maxStage": 2,
+    "family": [
+      "skiddo",
+      "gogoat"
+    ],
+    "parents": [
+      "skiddo"
+    ],
+    "children": [],
+    "cry": "sounds/pokemon/gogoat.mp3",
+    "forms": {
+      "base": {
+        "name": "Y-Gogoat",
+        "fullName": "Y-Gogoat",
+        "types": [
+          "ground"
+        ],
+        "image": "images/pokemon/gogoat.png",
+        "formType": "base"
+      }
+    }
+  },
+  {
+    "dex": 44,
+    "speciesId": "goblin",
+    "name": "Goblin",
+    "stage": 1,
+    "maxStage": 2,
+    "family": [
+      "goblin",
+      "goblin2"
+    ],
+    "parents": [],
+    "children": [
+      "goblin2"
+    ],
+    "cry": "sounds/pokemon/goblin.mp3",
+    "forms": {
+      "base": {
+        "name": "Goblin",
+        "fullName": "Goblin",
+        "types": [
+          "ice"
+        ],
+        "image": "images/pokemon/goblin.png",
+        "formType": "base"
+      }
+    }
+  },
+  {
+    "dex": 45,
+    "speciesId": "goblin2",
+    "name": "Goblin2",
+    "stage": 2,
+    "maxStage": 2,
+    "family": [
+      "goblin",
+      "goblin2"
+    ],
+    "parents": [
+      "goblin"
+    ],
+    "children": [],
+    "cry": "sounds/pokemon/goblin2.mp3",
+    "forms": {
+      "base": {
+        "name": "Goblin2",
+        "fullName": "Goblin2",
+        "types": [
+          "dark",
+          "ice"
+        ],
+        "image": "images/pokemon/goblin2.png",
+        "formType": "base"
+      },
+      "spiritbound": {
+        "name": "SB-Goblin2",
+        "fullName": "SB-Goblin2",
+        "types": [
+          "dark",
+          "ice",
+          "ghost"
+        ],
+        "image": "images/pokemon/goblin2.png",
+        "formType": "gimmick"
+      }
+    }
+  },
+  {
+    "dex": 46,
+    "speciesId": "miltank",
+    "name": "Y-Miltank",
+    "stage": 1,
+    "maxStage": 1,
+    "family": [
+      "miltank"
+    ],
+    "parents": [],
+    "children": [],
+    "cry": "sounds/pokemon/miltank.mp3",
+    "forms": {
+      "base": {
+        "name": "Y-Miltank",
+        "fullName": "Y-Miltank",
+        "types": [
+          "normal",
+          "poison"
+        ],
+        "image": "images/pokemon/miltank.png",
+        "formType": "base"
+      }
+    }
+  },
+  {
+    "dex": 47,
+    "speciesId": "vikings",
+    "name": "Vikings",
+    "stage": 1,
+    "maxStage": 3,
+    "family": [
+      "vikings",
+      "vikings2",
+      "vikings3"
+    ],
+    "parents": [],
+    "children": [
+      "vikings2"
+    ],
+    "cry": "sounds/pokemon/vikings.mp3",
+    "forms": {
+      "base": {
+        "name": "Vikings",
+        "fullName": "Vikings",
+        "types": [
+          "ice"
+        ],
+        "image": "images/pokemon/vikings.png",
+        "formType": "base"
+      }
+    }
+  },
+  {
+    "dex": 48,
+    "speciesId": "vikings2",
+    "name": "Vikings2",
+    "stage": 2,
+    "maxStage": 3,
+    "family": [
+      "vikings",
+      "vikings2",
+      "vikings3"
+    ],
+    "parents": [
+      "vikings"
+    ],
+    "children": [
+      "vikings3"
+    ],
+    "cry": "sounds/pokemon/vikings2.mp3",
+    "forms": {
+      "base": {
+        "name": "Vikings2",
+        "fullName": "Vikings2",
+        "types": [
+          "ice",
+          "steel"
+        ],
+        "image": "images/pokemon/vikings2.png",
+        "formType": "base"
+      }
+    }
+  },
+  {
+    "dex": 49,
+    "speciesId": "vikings3",
+    "name": "Vikings3",
+    "stage": 3,
+    "maxStage": 3,
+    "family": [
+      "vikings",
+      "vikings2",
+      "vikings3"
+    ],
+    "parents": [
+      "vikings2"
+    ],
+    "children": [],
+    "cry": "sounds/pokemon/vikings3.mp3",
+    "forms": {
+      "base": {
+        "name": "Vikings3",
+        "fullName": "Vikings3",
+        "types": [
+          "ice",
+          "steel"
+        ],
+        "image": "images/pokemon/vikings3.png",
+        "formType": "base"
+      }
+    }
+  },
+  {
+    "dex": 50,
+    "speciesId": "villagers",
+    "name": "Villagers",
+    "stage": 1,
+    "maxStage": 2,
+    "family": [
+      "villagers",
+      "villagers2"
+    ],
+    "parents": [],
+    "children": [
+      "villagers2"
+    ],
+    "cry": "sounds/pokemon/villagers.mp3",
+    "forms": {
+      "base": {
+        "name": "Villagers",
+        "fullName": "Villagers",
+        "types": [
+          "rock"
+        ],
+        "image": "images/pokemon/villagers.png",
+        "formType": "base"
+      }
+    }
+  },
+  {
+    "dex": 51,
+    "speciesId": "villagers2",
+    "name": "Villagers2",
+    "stage": 2,
+    "maxStage": 2,
+    "family": [
+      "villagers",
+      "villagers2"
+    ],
+    "parents": [
+      "villagers"
+    ],
+    "children": [],
+    "cry": "sounds/pokemon/villagers2.mp3",
+    "forms": {
+      "base": {
+        "name": "Villagers2",
+        "fullName": "Villagers2",
+        "types": [
+          "rock"
+        ],
+        "image": "images/pokemon/villagers2.png",
+        "formType": "base"
+      }
+    }
+  },
+  {
+    "dex": 52,
+    "speciesId": "zach",
+    "name": "Zach",
+    "stage": 1,
+    "maxStage": 2,
+    "family": [
+      "zach",
+      "zach2"
+    ],
+    "parents": [],
+    "children": [
+      "zach2"
+    ],
+    "cry": "sounds/pokemon/zach.mp3",
+    "forms": {
+      "base": {
+        "name": "Zach",
+        "fullName": "Zach",
+        "types": [
+          "dark",
+          "flying"
+        ],
+        "image": "images/pokemon/zach.png",
+        "formType": "base"
+      },
+      "spiritbound": {
+        "name": "SB-Zach",
+        "fullName": "SB-Zach",
+        "types": [
+          "dark",
+          "flying",
+          "poison"
+        ],
+        "image": "images/pokemon/zach.png",
+        "formType": "gimmick"
+      }
+    }
+  },
+  {
+    "dex": 53,
+    "speciesId": "zach2",
+    "name": "Zach2",
+    "stage": 2,
+    "maxStage": 2,
+    "family": [
+      "zach",
+      "zach2"
+    ],
+    "parents": [
+      "zach"
+    ],
+    "children": [],
+    "cry": "sounds/pokemon/zach2.mp3",
+    "forms": {
+      "base": {
+        "name": "Zach2",
+        "fullName": "Zach2",
+        "types": [
+          "dark",
+          "flying"
+        ],
+        "image": "images/pokemon/zach2.png",
+        "formType": "base"
+      }
+    }
+  },
+  {
+    "dex": 54,
+    "speciesId": "furuse",
+    "name": "Furuse",
+    "stage": 1,
+    "maxStage": 2,
+    "family": [
+      "furuse",
+      "scarsplode"
+    ],
+    "parents": [],
+    "children": [
+      "scarsplode"
+    ],
+    "cry": "sounds/pokemon/furuse.mp3",
+    "forms": {
+      "base": {
+        "name": "Furuse",
+        "fullName": "Furuse",
+        "types": [
+          "normal",
+          "fire"
+        ],
+        "image": "images/pokemon/furuse.png",
+        "formType": "base"
+      }
+    }
+  },
+  {
+    "dex": 55,
+    "speciesId": "scarsplode",
+    "name": "Scarsplode",
+    "stage": 2,
+    "maxStage": 2,
+    "family": [
+      "furuse",
+      "scarsplode"
+    ],
+    "parents": [
+      "furuse"
+    ],
+    "children": [],
+    "cry": "sounds/pokemon/scarsplode.mp3",
+    "forms": {
+      "base": {
+        "name": "Scarsplode",
+        "fullName": "Scarsplode",
+        "types": [
+          "normal",
+          "fire"
+        ],
+        "image": "images/pokemon/scarsplode.png",
+        "formType": "base"
+      },
+      "spiritbound": {
+        "name": "SB-Scarsplode",
+        "fullName": "SB-Scarsplode",
+        "types": [
+          "normal",
+          "fire",
+          "dark"
+        ],
+        "image": "images/pokemon/scarsplode.png",
+        "formType": "gimmick"
+      }
+    }
+  },
+  {
+    "dex": 56,
+    "speciesId": "bullicose",
+    "name": "Bullicose",
+    "stage": 1,
+    "maxStage": 1,
+    "family": [
+      "bullicose"
+    ],
+    "parents": [],
+    "children": [],
+    "cry": "sounds/pokemon/bullicose.mp3",
+    "forms": {
+      "base": {
+        "name": "Bullicose",
+        "fullName": "Bullicose",
+        "types": [
+          "fighting"
+        ],
+        "image": "images/pokemon/bullicose.png",
+        "formType": "base"
+      },
+      "spiritbound": {
+        "name": "SB-Bullicose",
+        "fullName": "SB-Bullicose",
+        "types": [
+          "fighting",
+          "flying",
+          "water"
+        ],
+        "image": "images/pokemon/bullicose.png",
+        "formType": "gimmick"
+      }
+    }
+  },
+  {
+    "dex": 57,
+    "speciesId": "lucibbit",
+    "name": "Lucibbit",
+    "stage": 1,
+    "maxStage": 1,
+    "family": [
+      "lucibbit"
+    ],
+    "parents": [],
+    "children": [],
+    "cry": "sounds/pokemon/lucibbit.mp3",
+    "forms": {
+      "base": {
+        "name": "Lucibbit",
+        "fullName": "Lucibbit",
+        "types": [
+          "water",
+          "psychic"
+        ],
+        "image": "images/pokemon/lucibbit.png",
+        "formType": "base"
+      },
+      "spiritbound": {
+        "name": "SB-Lucibbit",
+        "fullName": "SB-Lucibbit",
+        "types": [
+          "water",
+          "psychic",
+          "bug"
+        ],
+        "image": "images/pokemon/lucibbit.png",
+        "formType": "gimmick"
+      }
+    }
+  },
+  {
+    "dex": 58,
+    "speciesId": "boys",
+    "name": "Boys",
+    "stage": 1,
+    "maxStage": 1,
+    "family": [
+      "boys"
+    ],
+    "parents": [],
+    "children": [],
+    "cry": "sounds/pokemon/boys.mp3",
+    "forms": {
+      "base": {
+        "name": "Boys",
+        "fullName": "Boys",
+        "types": [
+          "fire",
+          "water"
+        ],
+        "image": "images/pokemon/boys.png",
+        "formType": "base"
+      }
+    }
+  },
+  {
+    "dex": 59,
+    "speciesId": "prowliance",
+    "name": "Prowliance",
+    "stage": 1,
+    "maxStage": 2,
+    "family": [
+      "prowliance",
+      "vendermine"
+    ],
+    "parents": [],
+    "children": [
+      "vendermine"
+    ],
+    "cry": "sounds/pokemon/prowliance.mp3",
+    "forms": {
+      "base": {
+        "name": "Prowliance",
+        "fullName": "Prowliance",
+        "types": [
+          "poison",
+          "fighting"
+        ],
+        "image": "images/pokemon/prowliance.png",
+        "formType": "base"
+      }
+    }
+  },
+  {
+    "dex": 60,
+    "speciesId": "vendermine",
+    "name": "Vendermine",
+    "stage": 2,
+    "maxStage": 2,
+    "family": [
+      "prowliance",
+      "vendermine"
+    ],
+    "parents": [
+      "prowliance"
+    ],
+    "children": [],
+    "cry": "sounds/pokemon/vendermine.mp3",
+    "forms": {
+      "base": {
+        "name": "Vendermine",
+        "fullName": "Vendermine",
+        "types": [
+          "poison",
+          "fighting"
+        ],
+        "image": "images/pokemon/vendermine.png",
+        "formType": "base"
+      }
+    }
+  },
+  {
+    "dex": 61,
+    "speciesId": "tanutric",
+    "name": "Tanutric",
+    "stage": 1,
+    "maxStage": 2,
+    "family": [
+      "tanutric",
+      "lurvinyct"
+    ],
+    "parents": [],
+    "children": [
+      "lurvinyct"
+    ],
+    "cry": "sounds/pokemon/tanutric.mp3",
+    "forms": {
+      "base": {
+        "name": "Tanutric",
+        "fullName": "Tanutric",
+        "types": [
+          "electric",
+          "ghost"
+        ],
+        "image": "images/pokemon/tanutric.png",
+        "formType": "base"
+      }
+    }
+  },
+  {
+    "dex": 62,
+    "speciesId": "lurvinyct",
+    "name": "Lurvinyct",
+    "stage": 2,
+    "maxStage": 2,
+    "family": [
+      "tanutric",
+      "lurvinyct"
+    ],
+    "parents": [
+      "tanutric"
+    ],
+    "children": [],
+    "cry": "sounds/pokemon/lurvinyct.mp3",
+    "forms": {
+      "base": {
+        "name": "Lurvinyct",
+        "fullName": "Lurvinyct",
+        "types": [
+          "electric",
+          "ghost"
+        ],
+        "image": "images/pokemon/lurvinyct.png",
+        "formType": "base"
+      },
+      "spiritbound": {
+        "name": "SB-Lurvinyct",
+        "fullName": "SB-Lurvinyct",
+        "types": [
+          "electric",
+          "ghost",
+          "dark"
+        ],
+        "image": "images/pokemon/lurvinyct.png",
+        "formType": "gimmick"
+      }
+    }
+  },
+  {
+    "dex": 63,
+    "speciesId": "denkana",
+    "name": "Denkana",
+    "stage": 1,
+    "maxStage": 1,
+    "family": [
+      "denkana"
+    ],
+    "parents": [],
+    "children": [],
+    "cry": "sounds/pokemon/denkana.mp3",
+    "forms": {
+      "base": {
+        "name": "Denkana",
+        "fullName": "Denkana",
+        "types": [
+          "electric",
+          "poison"
+        ],
+        "image": "images/pokemon/denkana.png",
+        "formType": "base"
+      },
+      "spiritbound": {
+        "name": "SB-Denkana",
+        "fullName": "SB-Denkana",
+        "types": [
+          "electric",
+          "poison",
+          "ghost"
+        ],
+        "image": "images/pokemon/denkana.png",
+        "formType": "gimmick"
+      }
+    }
+  },
+  {
+    "dex": 64,
+    "speciesId": "tom",
+    "name": "Tom",
+    "stage": 1,
+    "maxStage": 2,
+    "family": [
+      "tom",
+      "tom2"
+    ],
+    "parents": [],
+    "children": [
+      "tom2"
+    ],
+    "cry": "sounds/pokemon/tom.mp3",
+    "forms": {
+      "base": {
+        "name": "Tom",
+        "fullName": "Tom",
+        "types": [
+          "dark",
+          "steel"
+        ],
+        "image": "images/pokemon/tom.png",
+        "formType": "base"
+      },
+      "spiritbound": {
+        "name": "SB-Tom",
+        "fullName": "SB-Tom",
+        "types": [
+          "dark",
+          "steel",
+          "normal"
+        ],
+        "image": "images/pokemon/tom.png",
+        "formType": "gimmick"
+      }
+    }
+  },
+  {
+    "dex": 65,
+    "speciesId": "tom2",
+    "name": "Tom2",
+    "stage": 2,
+    "maxStage": 2,
+    "family": [
+      "tom",
+      "tom2"
+    ],
+    "parents": [
+      "tom"
+    ],
+    "children": [],
+    "cry": "sounds/pokemon/tom2.mp3",
+    "forms": {
+      "base": {
+        "name": "Tom2",
+        "fullName": "Tom2",
+        "types": [
+          "dark",
+          "steel"
+        ],
+        "image": "images/pokemon/tom2.png",
+        "formType": "base"
+      }
+    }
+  },
+  {
+    "dex": 66,
+    "speciesId": "parrot1",
+    "name": "Parrot1",
+    "stage": 1,
+    "maxStage": 3,
+    "family": [
+      "parrot1",
+      "parrot2",
+      "parrot3"
+    ],
+    "parents": [],
+    "children": [
+      "parrot2"
+    ],
+    "cry": "sounds/pokemon/parrot1.mp3",
+    "forms": {
+      "base": {
+        "name": "Parrot1",
+        "fullName": "Parrot1",
+        "types": [
+          "steel",
+          "ghost"
+        ],
+        "image": "images/pokemon/parrot1.png",
+        "formType": "base"
+      }
+    }
+  },
+  {
+    "dex": 67,
+    "speciesId": "parrot2",
+    "name": "Parrot2",
+    "stage": 2,
+    "maxStage": 3,
+    "family": [
+      "parrot1",
+      "parrot2",
+      "parrot3"
+    ],
+    "parents": [
+      "parrot1"
+    ],
+    "children": [
+      "parrot3"
+    ],
+    "cry": "sounds/pokemon/parrot2.mp3",
+    "forms": {
+      "base": {
+        "name": "Parrot2",
+        "fullName": "Parrot2",
+        "types": [
+          "steel",
+          "ghost"
+        ],
+        "image": "images/pokemon/parrot2.png",
+        "formType": "base"
+      }
+    }
+  },
+  {
+    "dex": 68,
+    "speciesId": "parrot3",
+    "name": "Parrot3",
+    "stage": 3,
+    "maxStage": 3,
+    "family": [
+      "parrot1",
+      "parrot2",
+      "parrot3"
+    ],
+    "parents": [
+      "parrot2"
+    ],
+    "children": [],
+    "cry": "sounds/pokemon/parrot3.mp3",
+    "forms": {
+      "base": {
+        "name": "Parrot3",
+        "fullName": "Parrot3",
+        "types": [
+          "steel",
+          "ghost"
+        ],
+        "image": "images/pokemon/parrot3.png",
+        "formType": "base"
+      },
+      "spiritbound": {
+        "name": "SB-Parrot3",
+        "fullName": "SB-Parrot3",
+        "types": [
+          "steel",
+          "ghost",
+          "fighting"
+        ],
+        "image": "images/pokemon/parrot3.png",
+        "formType": "gimmick"
+      }
+    }
+  },
+  {
+    "dex": 69,
+    "speciesId": "pandal",
+    "name": "PandaL",
+    "stage": 1,
+    "maxStage": 2,
+    "family": [
+      "pandal",
+      "pandal2"
+    ],
+    "parents": [],
+    "children": [
+      "pandal2"
+    ],
+    "cry": "sounds/pokemon/pandal.mp3",
+    "forms": {
+      "base": {
+        "name": "PandaL",
+        "fullName": "PandaL",
+        "types": [
+          "fairy"
+        ],
+        "image": "images/pokemon/pandal.png",
+        "formType": "base"
+      }
+    }
+  },
+  {
+    "dex": 70,
+    "speciesId": "pandal2",
+    "name": "PandaL2",
+    "stage": 2,
+    "maxStage": 2,
+    "family": [
+      "pandal",
+      "pandal2"
+    ],
+    "parents": [
+      "pandal"
+    ],
+    "children": [],
+    "cry": "sounds/pokemon/pandal2.mp3",
+    "forms": {
+      "base": {
+        "name": "PandaL2",
+        "fullName": "PandaL2",
+        "types": [
+          "fairy",
+          "fighting"
+        ],
+        "image": "images/pokemon/pandal2.png",
+        "formType": "base"
+      }
+    }
+  },
+  {
+    "dex": 71,
+    "speciesId": "phantump",
+    "name": "Y-Phantump",
+    "stage": 1,
+    "maxStage": 2,
+    "family": [
+      "phantump",
+      "trevenant"
+    ],
+    "parents": [],
+    "children": [
+      "trevenant"
+    ],
+    "cry": "sounds/pokemon/phantump.mp3",
+    "forms": {
+      "base": {
+        "name": "Y-Phantump",
+        "fullName": "Y-Phantump",
+        "types": [
+          "normal",
+          "fire"
+        ],
+        "image": "images/pokemon/phantump.png",
+        "formType": "base"
+      }
+    }
+  },
+  {
+    "dex": 72,
+    "speciesId": "trevenant",
+    "name": "Y-Trevenant",
+    "stage": 2,
+    "maxStage": 2,
+    "family": [
+      "phantump",
+      "trevenant"
+    ],
+    "parents": [
+      "phantump"
+    ],
+    "children": [],
+    "cry": "sounds/pokemon/trevenant.mp3",
+    "forms": {
+      "base": {
+        "name": "Y-Trevenant",
+        "fullName": "Y-Trevenant",
+        "types": [
+          "normal",
+          "fire"
+        ],
+        "image": "images/pokemon/trevenant.png",
+        "formType": "base"
+      }
+    }
+  },
+  {
+    "dex": 73,
+    "speciesId": "ducklett",
+    "name": "Y-Ducklett",
+    "stage": 1,
+    "maxStage": 2,
+    "family": [
+      "ducklett",
+      "swanna"
+    ],
+    "parents": [],
+    "children": [
+      "swanna"
+    ],
+    "cry": "sounds/pokemon/ducklett.mp3",
+    "forms": {
+      "base": {
+        "name": "Y-Ducklett",
+        "fullName": "Y-Ducklett",
+        "types": [
+          "fighting",
+          "flying"
+        ],
+        "image": "images/pokemon/ducklett.png",
+        "formType": "base"
+      }
+    }
+  },
+  {
+    "dex": 74,
+    "speciesId": "swanna",
+    "name": "Y-Swanna",
+    "stage": 2,
+    "maxStage": 2,
+    "family": [
+      "ducklett",
+      "swanna"
+    ],
+    "parents": [
+      "ducklett"
+    ],
+    "children": [],
+    "cry": "sounds/pokemon/swanna.mp3",
+    "forms": {
+      "base": {
+        "name": "Y-Swanna",
+        "fullName": "Y-Swanna",
+        "types": [
+          "fighting",
+          "flying"
+        ],
+        "image": "images/pokemon/swanna.png",
+        "formType": "base"
+      }
+    }
+  },
+  {
+    "dex": 75,
+    "speciesId": "cetoddle",
+    "name": "Y-Cetoddle",
+    "stage": 1,
+    "maxStage": 2,
+    "family": [
+      "cetoddle",
+      "cetitan"
+    ],
+    "parents": [],
+    "children": [
+      "cetitan"
+    ],
+    "cry": "sounds/pokemon/cetoddle.mp3",
+    "forms": {
+      "base": {
+        "name": "Y-Cetoddle",
+        "fullName": "Y-Cetoddle",
+        "types": [
+          "ice",
+          "flying"
+        ],
+        "image": "images/pokemon/cetoddle.png",
+        "formType": "base"
+      }
+    }
+  },
+  {
+    "dex": 76,
+    "speciesId": "cetitan",
+    "name": "Y-Cetitan",
+    "stage": 2,
+    "maxStage": 2,
+    "family": [
+      "cetoddle",
+      "cetitan"
+    ],
+    "parents": [
+      "cetoddle"
+    ],
+    "children": [],
+    "cry": "sounds/pokemon/cetitan.mp3",
+    "forms": {
+      "base": {
+        "name": "Y-Cetitan",
+        "fullName": "Y-Cetitan",
+        "types": [
+          "ice",
+          "flying"
+        ],
+        "image": "images/pokemon/cetitan.png",
+        "formType": "base"
+      }
+    }
+  },
+  {
+    "dex": 77,
+    "speciesId": "dennis",
+    "name": "Dennis",
+    "stage": 1,
+    "maxStage": 2,
+    "family": [
+      "dennis",
+      "dennis2"
+    ],
+    "parents": [],
+    "children": [
+      "dennis2"
+    ],
+    "cry": "sounds/pokemon/dennis.mp3",
+    "forms": {
+      "base": {
+        "name": "Dennis",
+        "fullName": "Dennis",
+        "types": [
+          "water",
+          "ghost"
+        ],
+        "image": "images/pokemon/dennis.png",
+        "formType": "base"
+      }
+    }
+  },
+  {
+    "dex": 78,
+    "speciesId": "dennis2",
+    "name": "Dennis2",
+    "stage": 2,
+    "maxStage": 2,
+    "family": [
+      "dennis",
+      "dennis2"
+    ],
+    "parents": [
+      "dennis"
+    ],
+    "children": [],
+    "cry": "sounds/pokemon/dennis2.mp3",
+    "forms": {
+      "base": {
+        "name": "Dennis2",
+        "fullName": "Dennis2",
+        "types": [
+          "water",
+          "ghost"
+        ],
+        "image": "images/pokemon/dennis2.png",
+        "formType": "base"
+      }
+    }
+  },
+  {
+    "dex": 79,
+    "speciesId": "pablo",
+    "name": "Pablo",
+    "stage": 1,
+    "maxStage": 2,
+    "family": [
+      "pablo",
+      "pablo2"
+    ],
+    "parents": [],
+    "children": [
+      "pablo2"
+    ],
+    "cry": "sounds/pokemon/pablo.mp3",
+    "forms": {
+      "base": {
+        "name": "Pablo",
+        "fullName": "Pablo",
+        "types": [
+          "rock",
+          "grass"
+        ],
+        "image": "images/pokemon/pablo.png",
+        "formType": "base"
+      }
+    }
+  },
+  {
+    "dex": 80,
+    "speciesId": "pablo2",
+    "name": "Pablo2",
+    "stage": 2,
+    "maxStage": 2,
+    "family": [
+      "pablo",
+      "pablo2"
+    ],
+    "parents": [
+      "pablo"
+    ],
+    "children": [],
+    "cry": "sounds/pokemon/pablo2.mp3",
+    "forms": {
+      "base": {
+        "name": "Pablo2",
+        "fullName": "Pablo2",
+        "types": [
+          "rock",
+          "grass"
+        ],
+        "image": "images/pokemon/pablo2.png",
+        "formType": "base"
+      }
+    }
+  },
+  {
+    "dex": 81,
+    "speciesId": "pawrietal",
+    "name": "Pawrietal",
+    "stage": 1,
+    "maxStage": 2,
+    "family": [
+      "pawrietal",
+      "lucerolith"
+    ],
+    "parents": [],
+    "children": [
+      "lucerolith"
+    ],
+    "cry": "sounds/pokemon/pawrietal.mp3",
+    "forms": {
+      "base": {
+        "name": "Pawrietal",
+        "fullName": "Pawrietal",
+        "types": [
+          "rock",
+          "ground"
+        ],
+        "image": "images/pokemon/pawrietal.png",
+        "formType": "base"
+      }
+    }
+  },
+  {
+    "dex": 82,
+    "speciesId": "lucerolith",
+    "name": "Lucerolith",
+    "stage": 2,
+    "maxStage": 2,
+    "family": [
+      "pawrietal",
+      "lucerolith"
+    ],
+    "parents": [
+      "pawrietal"
+    ],
+    "children": [],
+    "cry": "sounds/pokemon/lucerolith.mp3",
+    "forms": {
+      "base": {
+        "name": "Lucerolith",
+        "fullName": "Lucerolith",
+        "types": [
+          "rock",
+          "ground"
+        ],
+        "image": "images/pokemon/lucerolith.png",
+        "formType": "base"
+      }
+    }
+  },
+  {
+    "dex": 83,
+    "speciesId": "maractus",
+    "name": "Y-Maractus",
+    "stage": 1,
+    "maxStage": 2,
+    "family": [
+      "maractus",
+      "maractus2"
+    ],
+    "parents": [],
+    "children": [
+      "maractus2"
+    ],
+    "cry": "sounds/pokemon/maractus.mp3",
+    "forms": {
+      "base": {
+        "name": "Y-Maractus",
+        "fullName": "Y-Maractus",
+        "types": [
+          "fire",
+          "dark"
+        ],
+        "image": "images/pokemon/maractus.png",
+        "formType": "base"
+      }
+    }
+  },
+  {
+    "dex": 84,
+    "speciesId": "maractus2",
+    "name": "Y-Maractus2",
+    "stage": 2,
+    "maxStage": 2,
+    "family": [
+      "maractus",
+      "maractus2"
+    ],
+    "parents": [
+      "maractus"
+    ],
+    "children": [],
+    "cry": "sounds/pokemon/maractus2.mp3",
+    "forms": {
+      "base": {
+        "name": "Y-Maractus2",
+        "fullName": "Y-Maractus2",
+        "types": [
+          "fire",
+          "dark"
+        ],
+        "image": "images/pokemon/maractus2.png",
+        "formType": "base"
+      }
+    }
+  },
+  {
+    "dex": 85,
+    "speciesId": "invalid",
+    "name": "Invalid",
+    "stage": 1,
+    "maxStage": 1,
+    "family": [
+      "invalid"
+    ],
+    "parents": [],
+    "children": [],
+    "cry": "sounds/pokemon/invalid.mp3",
+    "forms": {
+      "form-frozen": {
+        "name": "Invalid",
+        "fullName": "Invalid[Frozen]",
+        "types": [
+          "ice"
+        ],
+        "image": "images/pokemon/invalid.png",
+        "formType": "cosmetic"
+      },
+      "form-thawed": {
+        "name": "Invalid",
+        "fullName": "Invalid[Thawed]",
+        "types": [
+          "rock",
+          "fire"
+        ],
+        "image": "images/pokemon/invalid.png",
+        "formType": "cosmetic"
+      },
+      "spiritbound": {
+        "name": "SB-Invalid",
+        "fullName": "SB-Invalid",
+        "types": [
+          "rock",
+          "fire",
+          "ice"
+        ],
+        "image": "images/pokemon/invalid.png",
+        "formType": "gimmick"
+      }
+    }
+  },
+  {
+    "dex": 86,
+    "speciesId": "wobbuffet",
+    "name": "Y-Wobbuffet",
+    "stage": 1,
+    "maxStage": 1,
+    "family": [
+      "wobbuffet"
+    ],
+    "parents": [],
+    "children": [],
+    "cry": "sounds/pokemon/wobbuffet.mp3",
+    "forms": {
+      "base": {
+        "name": "Y-Wobbuffet",
+        "fullName": "Y-Wobbuffet",
+        "types": [
+          "normal",
+          "ice"
+        ],
+        "image": "images/pokemon/wobbuffet.png",
+        "formType": "base"
+      }
+    }
+  },
+  {
+    "dex": 87,
+    "speciesId": "osmauranaut",
+    "name": "Osmauranaut",
+    "stage": 1,
+    "maxStage": 1,
+    "family": [
+      "osmauranaut"
+    ],
+    "parents": [],
+    "children": [],
+    "cry": "sounds/pokemon/osmauranaut.mp3",
+    "forms": {
+      "base": {
+        "name": "Osmauranaut",
+        "fullName": "Osmauranaut",
+        "types": [
+          "psychic",
+          "flying"
+        ],
+        "image": "images/pokemon/osmauranaut.png",
+        "formType": "base"
+      },
+      "spiritbound": {
+        "name": "SB-Osmauranaut",
+        "fullName": "SB-Osmauranaut",
+        "types": [
+          "psychic",
+          "flying",
+          "steel"
+        ],
+        "image": "images/pokemon/osmauranaut.png",
+        "formType": "gimmick"
+      }
+    }
+  },
+  {
+    "dex": 88,
+    "speciesId": "effithread",
+    "name": "Effithread",
+    "stage": 1,
+    "maxStage": 1,
+    "family": [
+      "effithread"
+    ],
+    "parents": [],
+    "children": [],
+    "cry": "sounds/pokemon/effithread.mp3",
+    "forms": {
+      "base": {
+        "name": "Effithread",
+        "fullName": "Effithread",
+        "types": [
+          "normal",
+          "ghost"
+        ],
+        "image": "images/pokemon/effithread.png",
+        "formType": "base"
+      }
+    }
+  },
+  {
+    "dex": 89,
+    "speciesId": "harmoneon",
+    "name": "Harmoneon",
+    "stage": 1,
+    "maxStage": 1,
+    "family": [
+      "harmoneon"
+    ],
+    "parents": [],
+    "children": [],
+    "cry": "sounds/pokemon/harmoneon.mp3",
+    "forms": {
+      "base": {
+        "name": "Harmoneon",
+        "fullName": "Harmoneon",
+        "types": [
+          "normal"
+        ],
+        "image": "images/pokemon/harmoneon.png",
+        "formType": "base"
+      }
+    }
+  },
+  {
+    "dex": 90,
+    "speciesId": "varoom",
+    "name": "Y-Varoom",
+    "stage": 1,
+    "maxStage": 2,
+    "family": [
+      "varoom",
+      "revavroom"
+    ],
+    "parents": [],
+    "children": [
+      "revavroom"
+    ],
+    "cry": "sounds/pokemon/varoom.mp3",
+    "forms": {
+      "base": {
+        "name": "Y-Varoom",
+        "fullName": "Y-Varoom",
+        "types": [
+          "steel",
+          "electric"
+        ],
+        "image": "images/pokemon/varoom.png",
+        "formType": "base"
+      }
+    }
+  },
+  {
+    "dex": 91,
+    "speciesId": "revavroom",
+    "name": "Y-Revavroom",
+    "stage": 2,
+    "maxStage": 2,
+    "family": [
+      "varoom",
+      "revavroom"
+    ],
+    "parents": [
+      "varoom"
+    ],
+    "children": [],
+    "cry": "sounds/pokemon/revavroom.mp3",
+    "forms": {
+      "base": {
+        "name": "Y-Revavroom",
+        "fullName": "Y-Revavroom",
+        "types": [
+          "steel",
+          "electric"
+        ],
+        "image": "images/pokemon/revavroom.png",
+        "formType": "base"
+      }
+    }
+  },
+  {
+    "dex": 92,
+    "speciesId": "timberwoof",
+    "name": "Timberwoof",
+    "stage": 1,
+    "maxStage": 3,
+    "family": [
+      "timberwoof",
+      "alupine",
+      "alvu"
+    ],
+    "parents": [],
+    "children": [
+      "alupine"
+    ],
+    "cry": "sounds/pokemon/timberwoof.mp3",
+    "forms": {
+      "base": {
+        "name": "Timberwoof",
+        "fullName": "Timberwoof",
+        "types": [
+          "grass",
+          "normal"
+        ],
+        "image": "images/pokemon/timberwoof.png",
+        "formType": "base"
+      }
+    }
+  },
+  {
+    "dex": 93,
+    "speciesId": "alupine",
+    "name": "Alupine",
+    "stage": 2,
+    "maxStage": 3,
+    "family": [
+      "timberwoof",
+      "alupine",
+      "alvu"
+    ],
+    "parents": [
+      "timberwoof"
+    ],
+    "children": [
+      "alvu"
+    ],
+    "cry": "sounds/pokemon/alupine.mp3",
+    "forms": {
+      "base": {
+        "name": "Alupine",
+        "fullName": "Alupine",
+        "types": [
+          "grass",
+          "normal"
+        ],
+        "image": "images/pokemon/alupine.png",
+        "formType": "base"
+      }
+    }
+  },
+  {
+    "dex": 94,
+    "speciesId": "alvu",
+    "name": "Alvu",
+    "stage": 3,
+    "maxStage": 3,
+    "family": [
+      "timberwoof",
+      "alupine",
+      "alvu"
+    ],
+    "parents": [
+      "alupine"
+    ],
+    "children": [],
+    "cry": "sounds/pokemon/alvu.mp3",
+    "forms": {
+      "base": {
+        "name": "Alvu",
+        "fullName": "Alvu",
+        "types": [
+          "grass",
+          "dark"
+        ],
+        "image": "images/pokemon/alvu.png",
+        "formType": "base"
+      },
+      "spiritbound": {
+        "name": "SB-Alvu",
+        "fullName": "SB-Alvu",
+        "types": [
+          "grass",
+          "dark",
+          "flying"
+        ],
+        "image": "images/pokemon/alvu.png",
+        "formType": "gimmick"
+      }
+    }
+  },
+  {
+    "dex": 95,
+    "speciesId": "aerieow",
+    "name": "Aerieow",
+    "stage": 1,
+    "maxStage": 3,
+    "family": [
+      "aerieow",
+      "aquilleo",
+      "elyosse"
+    ],
+    "parents": [],
+    "children": [
+      "aquilleo"
+    ],
+    "cry": "sounds/pokemon/aerieow.mp3",
+    "forms": {
+      "base": {
+        "name": "Aerieow",
+        "fullName": "Aerieow",
+        "types": [
+          "normal",
+          "flying"
+        ],
+        "image": "images/pokemon/aerieow.png",
+        "formType": "base"
+      }
+    }
+  },
+  {
+    "dex": 96,
+    "speciesId": "aquilleo",
+    "name": "Aquilleo",
+    "stage": 2,
+    "maxStage": 3,
+    "family": [
+      "aerieow",
+      "aquilleo",
+      "elyosse"
+    ],
+    "parents": [
+      "aerieow"
+    ],
+    "children": [
+      "elyosse"
+    ],
+    "cry": "sounds/pokemon/aquilleo.mp3",
+    "forms": {
+      "base": {
+        "name": "Aquilleo",
+        "fullName": "Aquilleo",
+        "types": [
+          "normal",
+          "flying"
+        ],
+        "image": "images/pokemon/aquilleo.png",
+        "formType": "base"
+      }
+    }
+  },
+  {
+    "dex": 97,
+    "speciesId": "elyosse",
+    "name": "Elyosse",
+    "stage": 3,
+    "maxStage": 3,
+    "family": [
+      "aerieow",
+      "aquilleo",
+      "elyosse"
+    ],
+    "parents": [
+      "aquilleo"
+    ],
+    "children": [],
+    "cry": "sounds/pokemon/elyosse.mp3",
+    "forms": {
+      "base": {
+        "name": "Elyosse",
+        "fullName": "Elyosse",
+        "types": [
+          "steel",
+          "flying"
+        ],
+        "image": "images/pokemon/elyosse.png",
+        "formType": "base"
+      },
+      "spiritbound": {
+        "name": "SB-Elyosse",
+        "fullName": "SB-Elyosse",
+        "types": [
+          "steel",
+          "flying",
+          "grass"
+        ],
+        "image": "images/pokemon/elyosse.png",
+        "formType": "gimmick"
+      }
+    }
+  },
+  {
+    "dex": 98,
+    "speciesId": "seviper",
+    "name": "Y-Seviper",
+    "stage": 1,
+    "maxStage": 1,
+    "family": [
+      "seviper"
+    ],
+    "parents": [],
+    "children": [],
+    "cry": "sounds/pokemon/seviper.mp3",
+    "forms": {
+      "base": {
+        "name": "Y-Seviper",
+        "fullName": "Y-Seviper",
+        "types": [
+          "ice",
+          "poison"
+        ],
+        "image": "images/pokemon/seviper.png",
+        "formType": "base"
+      }
+    }
+  },
+  {
+    "dex": 99,
+    "speciesId": "zangoose",
+    "name": "Y-Zangoose",
+    "stage": 1,
+    "maxStage": 1,
+    "family": [
+      "zangoose"
+    ],
+    "parents": [],
+    "children": [],
+    "cry": "sounds/pokemon/zangoose.mp3",
+    "forms": {
+      "base": {
+        "name": "Y-Zangoose",
+        "fullName": "Y-Zangoose",
+        "types": [
+          "fire",
+          "ground"
+        ],
+        "image": "images/pokemon/zangoose.png",
+        "formType": "base"
+      }
+    }
+  },
+  {
+    "dex": 100,
+    "speciesId": "lizamental",
+    "name": "Lizamental",
+    "stage": 1,
+    "maxStage": 2,
+    "family": [
+      "lizamental",
+      "elementalists2"
+    ],
+    "parents": [],
+    "children": [
+      "elementalists2",
+      "elementalists3",
+      "elementalists4",
+      "elementalists5"
+    ],
+    "cry": "sounds/pokemon/lizamental.mp3",
+    "forms": {
+      "base": {
+        "name": "Lizamental",
+        "fullName": "Lizamental",
+        "types": [
+          "normal"
+        ],
+        "image": "images/pokemon/lizamental.png",
+        "formType": "base"
+      }
+    }
+  },
+  {
+    "dex": 101,
+    "speciesId": "elementalists2",
+    "name": "Elementalists2",
+    "stage": 2,
+    "maxStage": 2,
+    "family": [
+      "lizamental",
+      "elementalists2"
+    ],
+    "parents": [
+      "lizamental"
+    ],
+    "children": [],
+    "cry": "sounds/pokemon/elementalists2.mp3",
+    "forms": {
+      "base": {
+        "name": "Elementalists2",
+        "fullName": "Elementalists2",
+        "types": [
+          "fire"
+        ],
+        "image": "images/pokemon/elementalists2.png",
+        "formType": "base"
+      }
+    }
+  },
+  {
+    "dex": 102,
+    "speciesId": "elementalists3",
+    "name": "Elementalists3",
+    "stage": 2,
+    "maxStage": 2,
+    "family": [
+      "lizamental",
+      "elementalists3"
+    ],
+    "parents": [
+      "lizamental"
+    ],
+    "children": [],
+    "cry": "sounds/pokemon/elementalists3.mp3",
+    "forms": {
+      "base": {
+        "name": "Elementalists3",
+        "fullName": "Elementalists3",
+        "types": [
+          "water"
+        ],
+        "image": "images/pokemon/elementalists3.png",
+        "formType": "base"
+      }
+    }
+  },
+  {
+    "dex": 103,
+    "speciesId": "elementalists4",
+    "name": "Elementalists4",
+    "stage": 2,
+    "maxStage": 2,
+    "family": [
+      "lizamental",
+      "elementalists4"
+    ],
+    "parents": [
+      "lizamental"
+    ],
+    "children": [],
+    "cry": "sounds/pokemon/elementalists4.mp3",
+    "forms": {
+      "base": {
+        "name": "Elementalists4",
+        "fullName": "Elementalists4",
+        "types": [
+          "ground"
+        ],
+        "image": "images/pokemon/elementalists4.png",
+        "formType": "base"
+      }
+    }
+  },
+  {
+    "dex": 104,
+    "speciesId": "elementalists5",
+    "name": "Elementalists5",
+    "stage": 2,
+    "maxStage": 2,
+    "family": [
+      "lizamental",
+      "elementalists5"
+    ],
+    "parents": [
+      "lizamental"
+    ],
+    "children": [],
+    "cry": "sounds/pokemon/elementalists5.mp3",
+    "forms": {
+      "base": {
+        "name": "Elementalists5",
+        "fullName": "Elementalists5",
+        "types": [
+          "flying"
+        ],
+        "image": "images/pokemon/elementalists5.png",
+        "formType": "base"
+      }
+    }
+  },
+  {
+    "dex": 105,
+    "speciesId": "luvdisc",
+    "name": "Y-Luvdisc",
+    "stage": 1,
+    "maxStage": 2,
+    "family": [
+      "luvdisc",
+      "luvdisc2"
+    ],
+    "parents": [],
+    "children": [
+      "luvdisc2"
+    ],
+    "cry": "sounds/pokemon/luvdisc.mp3",
+    "forms": {
+      "base": {
+        "name": "Y-Luvdisc",
+        "fullName": "Y-Luvdisc",
+        "types": [
+          "water",
+          "fairy"
+        ],
+        "image": "images/pokemon/luvdisc.png",
+        "formType": "base"
+      }
+    }
+  },
+  {
+    "dex": 106,
+    "speciesId": "luvdisc2",
+    "name": "Y-Luvdisc2",
+    "stage": 2,
+    "maxStage": 2,
+    "family": [
+      "luvdisc",
+      "luvdisc2"
+    ],
+    "parents": [
+      "luvdisc"
+    ],
+    "children": [],
+    "cry": "sounds/pokemon/luvdisc2.mp3",
+    "forms": {
+      "base": {
+        "name": "Y-Luvdisc2",
+        "fullName": "Y-Luvdisc2",
+        "types": [
+          "water",
+          "fairy"
+        ],
+        "image": "images/pokemon/luvdisc2.png",
+        "formType": "base"
+      }
+    }
+  },
+  {
+    "dex": 107,
+    "speciesId": "fishenet",
+    "name": "Fishenet",
+    "stage": 1,
+    "maxStage": 1,
+    "family": [
+      "fishenet"
+    ],
+    "parents": [],
+    "children": [],
+    "cry": "sounds/pokemon/fishenet.mp3",
+    "forms": {
+      "base": {
+        "name": "Fishenet",
+        "fullName": "Fishenet",
+        "types": [
+          "water",
+          "ground"
+        ],
+        "image": "images/pokemon/fishenet.png",
+        "formType": "base"
+      },
+      "spiritbound": {
+        "name": "SB-Fishenet",
+        "fullName": "SB-Fishenet",
+        "types": [
+          "water",
+          "ground",
+          "bug"
+        ],
+        "image": "images/pokemon/fishenet.png",
+        "formType": "gimmick"
+      }
+    }
+  },
+  {
+    "dex": 108,
+    "speciesId": "zeostisum",
+    "name": "Zeostisum",
+    "stage": 1,
+    "maxStage": 1,
+    "family": [
+      "zeostisum"
+    ],
+    "parents": [],
+    "children": [],
+    "cry": "sounds/pokemon/zeostisum.mp3",
+    "forms": {
+      "base": {
+        "name": "Zeostisum",
+        "fullName": "Zeostisum",
+        "types": [
+          "water",
+          "poison"
+        ],
+        "image": "images/pokemon/zeostisum.png",
+        "formType": "base"
+      },
+      "spiritbound": {
+        "name": "SB-Zeostisum",
+        "fullName": "SB-Zeostisum",
+        "types": [
+          "water",
+          "poison",
+          "rock"
+        ],
+        "image": "images/pokemon/zeostisum.png",
+        "formType": "gimmick"
+      }
+    }
+  },
+  {
+    "dex": 109,
+    "speciesId": "axoletal",
+    "name": "Axoletal",
+    "stage": 1,
+    "maxStage": 1,
+    "family": [
+      "axoletal"
+    ],
+    "parents": [],
+    "children": [],
+    "cry": "sounds/pokemon/axoletal.mp3",
+    "forms": {
+      "base": {
+        "name": "Axoletal",
+        "fullName": "Axoletal",
+        "types": [
+          "water",
+          "steel"
+        ],
+        "image": "images/pokemon/axoletal.png",
+        "formType": "base"
+      },
+      "spiritbound": {
+        "name": "SB-Axoletal",
+        "fullName": "SB-Axoletal",
+        "types": [
+          "water",
+          "steel",
+          "fairy"
+        ],
+        "image": "images/pokemon/axoletal.png",
+        "formType": "gimmick"
+      }
+    }
+  },
+  {
+    "dex": 110,
+    "speciesId": "cirrince",
+    "name": "Cirrince",
+    "stage": 1,
+    "maxStage": 3,
+    "family": [
+      "cirrince",
+      "caelmeir",
+      "majestide"
+    ],
+    "parents": [],
+    "children": [
+      "caelmeir"
+    ],
+    "cry": "sounds/pokemon/cirrince.mp3",
+    "forms": {
+      "base": {
+        "name": "Cirrince",
+        "fullName": "Cirrince",
+        "types": [
+          "water",
+          "flying"
+        ],
+        "image": "images/pokemon/cirrince.png",
+        "formType": "base"
+      }
+    }
+  },
+  {
+    "dex": 111,
+    "speciesId": "caelmeir",
+    "name": "Caelmeir",
+    "stage": 2,
+    "maxStage": 3,
+    "family": [
+      "cirrince",
+      "caelmeir",
+      "majestide"
+    ],
+    "parents": [
+      "cirrince"
+    ],
+    "children": [
+      "majestide"
+    ],
+    "cry": "sounds/pokemon/caelmeir.mp3",
+    "forms": {
+      "base": {
+        "name": "Caelmeir",
+        "fullName": "Caelmeir",
+        "types": [
+          "water",
+          "flying"
+        ],
+        "image": "images/pokemon/caelmeir.png",
+        "formType": "base"
+      }
+    }
+  },
+  {
+    "dex": 112,
+    "speciesId": "majestide",
+    "name": "Majestide",
+    "stage": 3,
+    "maxStage": 3,
+    "family": [
+      "cirrince",
+      "caelmeir",
+      "majestide"
+    ],
+    "parents": [
+      "caelmeir"
+    ],
+    "children": [],
+    "cry": "sounds/pokemon/majestide.mp3",
+    "forms": {
+      "base": {
+        "name": "Majestide",
+        "fullName": "Majestide",
+        "types": [
+          "water",
+          "flying"
+        ],
+        "image": "images/pokemon/majestide.png",
+        "formType": "base"
+      }
+    }
+  },
+  {
+    "dex": 113,
+    "speciesId": "gumball",
+    "name": "Gumball",
+    "stage": 1,
+    "maxStage": 1,
+    "family": [
+      "gumball"
+    ],
+    "parents": [],
+    "children": [],
+    "cry": "sounds/pokemon/gumball.mp3",
+    "forms": {
+      "base": {
+        "name": "Gumball",
+        "fullName": "Gumball",
+        "types": [
+          "normal",
+          "psychic"
+        ],
+        "image": "images/pokemon/gumball.png",
+        "formType": "base"
+      },
+      "spiritbound": {
+        "name": "SB-Gumball",
+        "fullName": "SB-Gumball",
+        "types": [
+          "normal",
+          "psychic",
+          "dark"
+        ],
+        "image": "images/pokemon/gumball.png",
+        "formType": "gimmick"
+      }
+    }
+  },
+  {
+    "dex": 114,
+    "speciesId": "panda",
+    "name": "Panda",
+    "stage": 1,
+    "maxStage": 1,
+    "family": [
+      "panda"
+    ],
+    "parents": [],
+    "children": [],
+    "cry": "sounds/pokemon/panda.mp3",
+    "forms": {
+      "base": {
+        "name": "Panda",
+        "fullName": "Panda",
+        "types": [
+          "normal",
+          "ghost"
+        ],
+        "image": "images/pokemon/panda.png",
+        "formType": "base"
+      },
+      "spiritbound": {
+        "name": "SB-Panda",
+        "fullName": "SB-Panda",
+        "types": [
+          "normal",
+          "ghost",
+          "fire"
+        ],
+        "image": "images/pokemon/panda.png",
+        "formType": "gimmick"
+      }
+    }
+  },
+  {
+    "dex": 115,
+    "speciesId": "cat",
+    "name": "CAT",
+    "stage": 1,
+    "maxStage": 1,
+    "family": [
+      "cat"
+    ],
+    "parents": [],
+    "children": [],
+    "cry": "sounds/pokemon/cat.mp3",
+    "forms": {
+      "form-chariot": {
+        "name": "CAT",
+        "fullName": "CAT[Chariot]",
+        "types": [
+          "grass",
+          "fighting"
+        ],
+        "image": "images/pokemon/cat.png",
+        "formType": "cosmetic"
+      },
+      "form-exposed": {
+        "name": "CAT",
+        "fullName": "CAT[Exposed]",
+        "types": [
+          "normal",
+          "fighting"
+        ],
+        "image": "images/pokemon/cat.png",
+        "formType": "cosmetic"
+      }
+    }
+  },
+  {
+    "dex": 116,
+    "speciesId": "echoes",
+    "name": "Echoes",
+    "stage": 1,
+    "maxStage": 1,
+    "family": [
+      "echoes"
+    ],
+    "parents": [],
+    "children": [],
+    "cry": "sounds/pokemon/echoes.mp3",
+    "forms": {
+      "base": {
+        "name": "Echoes",
+        "fullName": "Echoes",
+        "types": [
+          "ghost"
+        ],
+        "image": "images/pokemon/echoes.png",
+        "formType": "base"
+      }
+    }
+  },
+  {
+    "dex": 117,
+    "speciesId": "solosis",
+    "name": "Y-Solosis",
+    "stage": 1,
+    "maxStage": 3,
+    "family": [
+      "solosis",
+      "duosion",
+      "reuinclus"
+    ],
+    "parents": [],
+    "children": [
+      "duosion"
+    ],
+    "cry": "sounds/pokemon/solosis.mp3",
+    "forms": {
+      "base": {
+        "name": "Y-Solosis",
+        "fullName": "Y-Solosis",
+        "types": [
+          "water",
+          "psychic"
+        ],
+        "image": "images/pokemon/solosis.png",
+        "formType": "base"
+      }
+    }
+  },
+  {
+    "dex": 118,
+    "speciesId": "duosion",
+    "name": "Y-Duosion",
+    "stage": 2,
+    "maxStage": 3,
+    "family": [
+      "solosis",
+      "duosion",
+      "reuinclus"
+    ],
+    "parents": [
+      "solosis"
+    ],
+    "children": [
+      "reuinclus"
+    ],
+    "cry": "sounds/pokemon/duosion.mp3",
+    "forms": {
+      "base": {
+        "name": "Y-Duosion",
+        "fullName": "Y-Duosion",
+        "types": [
+          "water",
+          "psychic"
+        ],
+        "image": "images/pokemon/duosion.png",
+        "formType": "base"
+      }
+    }
+  },
+  {
+    "dex": 119,
+    "speciesId": "reuinclus",
+    "name": "Y-Reuinclus",
+    "stage": 3,
+    "maxStage": 3,
+    "family": [
+      "solosis",
+      "duosion",
+      "reuinclus"
+    ],
+    "parents": [
+      "duosion"
+    ],
+    "children": [],
+    "cry": "sounds/pokemon/reuinclus.mp3",
+    "forms": {
+      "base": {
+        "name": "Y-Reuinclus",
+        "fullName": "Y-Reuinclus",
+        "types": [
+          "water",
+          "psychic"
+        ],
+        "image": "images/pokemon/reuinclus.png",
+        "formType": "base"
+      }
+    }
+  },
+  {
+    "dex": 120,
+    "speciesId": "smoldreir",
+    "name": "Smoldreir",
+    "stage": 1,
+    "maxStage": 2,
+    "family": [
+      "smoldreir",
+      "crimarsiken"
+    ],
+    "parents": [],
+    "children": [
+      "crimarsiken"
+    ],
+    "cry": "sounds/pokemon/smoldreir.mp3",
+    "forms": {
+      "base": {
+        "name": "Smoldreir",
+        "fullName": "Smoldreir",
+        "types": [
+          "fire"
+        ],
+        "image": "images/pokemon/smoldreir.png",
+        "formType": "base"
+      }
+    }
+  },
+  {
+    "dex": 121,
+    "speciesId": "crimarsiken",
+    "name": "Crimarsiken",
+    "stage": 2,
+    "maxStage": 2,
+    "family": [
+      "smoldreir",
+      "crimarsiken"
+    ],
+    "parents": [
+      "smoldreir"
+    ],
+    "children": [],
+    "cry": "sounds/pokemon/crimarsiken.mp3",
+    "forms": {
+      "base": {
+        "name": "Crimarsiken",
+        "fullName": "Crimarsiken",
+        "types": [
+          "fire",
+          "poison"
+        ],
+        "image": "images/pokemon/crimarsiken.png",
+        "formType": "base"
+      },
+      "spiritbound": {
+        "name": "SB-Crimarsiken",
+        "fullName": "SB-Crimarsiken",
+        "types": [
+          "fire",
+          "poison",
+          "psychic"
+        ],
+        "image": "images/pokemon/crimarsiken.png",
+        "formType": "gimmick"
+      }
+    }
+  },
+  {
+    "dex": 122,
+    "speciesId": "mesmerade",
+    "name": "Mesmerade",
+    "stage": 1,
+    "maxStage": 2,
+    "family": [
+      "mesmerade",
+      "renumbra"
+    ],
+    "parents": [],
+    "children": [
+      "renumbra"
+    ],
+    "cry": "sounds/pokemon/mesmerade.mp3",
+    "forms": {
+      "base": {
+        "name": "Mesmerade",
+        "fullName": "Mesmerade",
+        "types": [
+          "psychic"
+        ],
+        "image": "images/pokemon/mesmerade.png",
+        "formType": "base"
+      }
+    }
+  },
+  {
+    "dex": 123,
+    "speciesId": "renumbra",
+    "name": "Renumbra",
+    "stage": 2,
+    "maxStage": 2,
+    "family": [
+      "mesmerade",
+      "renumbra"
+    ],
+    "parents": [
+      "mesmerade"
+    ],
+    "children": [],
+    "cry": "sounds/pokemon/renumbra.mp3",
+    "forms": {
+      "base": {
+        "name": "Renumbra",
+        "fullName": "Renumbra",
+        "types": [
+          "psychic",
+          "dark"
+        ],
+        "image": "images/pokemon/renumbra.png",
+        "formType": "base"
+      },
+      "spiritbound": {
+        "name": "SB-Renumbra",
+        "fullName": "SB-Renumbra",
+        "types": [
+          "psychic",
+          "dark",
+          "fairy"
+        ],
+        "image": "images/pokemon/renumbra.png",
+        "formType": "gimmick"
+      }
+    }
+  },
+  {
+    "dex": 124,
+    "speciesId": "lumiora",
+    "name": "Lumiora",
+    "stage": 1,
+    "maxStage": 2,
+    "family": [
+      "lumiora",
+      "astravelle"
+    ],
+    "parents": [],
+    "children": [
+      "astravelle"
+    ],
+    "cry": "sounds/pokemon/lumiora.mp3",
+    "forms": {
+      "form-south": {
+        "name": "Lumiora",
+        "fullName": "Lumiora[South]",
+        "types": [
+          "fairy",
+          "dragon"
+        ],
+        "image": "images/pokemon/lumiora.png",
+        "formType": "cosmetic"
+      },
+      "form-north": {
+        "name": "Lumiora",
+        "fullName": "Lumiora[North]",
+        "types": [
+          "fairy",
+          "fire"
+        ],
+        "image": "images/pokemon/lumiora.png",
+        "formType": "cosmetic"
+      }
+    }
+  },
+  {
+    "dex": 125,
+    "speciesId": "astravelle",
+    "name": "Astravelle",
+    "stage": 2,
+    "maxStage": 2,
+    "family": [
+      "lumiora",
+      "astravelle"
+    ],
+    "parents": [
+      "lumiora"
+    ],
+    "children": [],
+    "cry": "sounds/pokemon/astravelle.mp3",
+    "forms": {
+      "base": {
+        "name": "Astravelle",
+        "fullName": "Astravelle",
+        "types": [
+          "fairy",
+          "dragon"
+        ],
+        "image": "images/pokemon/astravelle.png",
+        "formType": "base"
+      },
+      "spiritbound": {
+        "name": "SB-Astravelle",
+        "fullName": "SB-Astravelle",
+        "types": [
+          "fairy",
+          "dragon",
+          "fire"
+        ],
+        "image": "images/pokemon/astravelle.png",
+        "formType": "gimmick"
+      }
+    }
+  },
+  {
+    "dex": 126,
+    "speciesId": "sunadrax",
+    "name": "Sunadrax",
+    "stage": 1,
+    "maxStage": 1,
+    "family": [
+      "sunadrax"
+    ],
+    "parents": [],
+    "children": [],
+    "cry": "sounds/pokemon/sunadrax.mp3",
+    "forms": {
+      "base": {
+        "name": "Sunadrax",
+        "fullName": "Sunadrax",
+        "types": [
+          "ground",
+          "dragon"
+        ],
+        "image": "images/pokemon/sunadrax.png",
+        "formType": "base"
+      },
+      "spiritbound": {
+        "name": "SB-Sunadrax",
+        "fullName": "SB-Sunadrax",
+        "types": [
+          "ground",
+          "dragon",
+          "fighting"
+        ],
+        "image": "images/pokemon/sunadrax.png",
+        "formType": "gimmick"
+      }
+    }
+  },
+  {
+    "dex": 127,
+    "speciesId": "cuddaclysm",
+    "name": "Cuddaclysm",
+    "stage": 1,
+    "maxStage": 2,
+    "family": [
+      "cuddaclysm",
+      "maliscorn"
+    ],
+    "parents": [],
+    "children": [
+      "maliscorn"
+    ],
+    "cry": "sounds/pokemon/cuddaclysm.mp3",
+    "forms": {
+      "base": {
+        "name": "Cuddaclysm",
+        "fullName": "Cuddaclysm",
+        "types": [
+          "dark",
+          "dragon"
+        ],
+        "image": "images/pokemon/cuddaclysm.png",
+        "formType": "base"
+      }
+    }
+  },
+  {
+    "dex": 128,
+    "speciesId": "maliscorn",
+    "name": "Maliscorn",
+    "stage": 2,
+    "maxStage": 2,
+    "family": [
+      "cuddaclysm",
+      "maliscorn"
+    ],
+    "parents": [
+      "cuddaclysm"
+    ],
+    "children": [],
+    "cry": "sounds/pokemon/maliscorn.mp3",
+    "forms": {
+      "base": {
+        "name": "Maliscorn",
+        "fullName": "Maliscorn",
+        "types": [
+          "dark",
+          "dragon"
+        ],
+        "image": "images/pokemon/maliscorn.png",
+        "formType": "base"
+      },
+      "spiritbound": {
+        "name": "SB-Maliscorn",
+        "fullName": "SB-Maliscorn",
+        "types": [
+          "dark",
+          "dragon",
+          "poison"
+        ],
+        "image": "images/pokemon/maliscorn.png",
+        "formType": "gimmick"
+      }
+    }
+  },
+  {
+    "dex": 129,
+    "speciesId": "lutrumi",
+    "name": "Lutrumi",
+    "stage": 1,
+    "maxStage": 3,
+    "family": [
+      "lutrumi",
+      "kaligaurd",
+      "abyssonis"
+    ],
+    "parents": [],
+    "children": [
+      "kaligaurd"
+    ],
+    "cry": "sounds/pokemon/lutrumi.mp3",
+    "forms": {
+      "base": {
+        "name": "Lutrumi",
+        "fullName": "Lutrumi",
+        "types": [
+          "water"
+        ],
+        "image": "images/pokemon/lutrumi.png",
+        "formType": "base"
+      }
+    }
+  },
+  {
+    "dex": 130,
+    "speciesId": "kaligaurd",
+    "name": "Kaligaurd",
+    "stage": 2,
+    "maxStage": 3,
+    "family": [
+      "lutrumi",
+      "kaligaurd",
+      "abyssonis"
+    ],
+    "parents": [
+      "lutrumi"
+    ],
+    "children": [
+      "abyssonis"
+    ],
+    "cry": "sounds/pokemon/kaligaurd.mp3",
+    "forms": {
+      "base": {
+        "name": "Kaligaurd",
+        "fullName": "Kaligaurd",
+        "types": [
+          "water",
+          "dragon"
+        ],
+        "image": "images/pokemon/kaligaurd.png",
+        "formType": "base"
+      }
+    }
+  },
+  {
+    "dex": 131,
+    "speciesId": "abyssonis",
+    "name": "Abyssonis",
+    "stage": 3,
+    "maxStage": 3,
+    "family": [
+      "lutrumi",
+      "kaligaurd",
+      "abyssonis"
+    ],
+    "parents": [
+      "kaligaurd"
+    ],
+    "children": [],
+    "cry": "sounds/pokemon/abyssonis.mp3",
+    "forms": {
+      "base": {
+        "name": "Abyssonis",
+        "fullName": "Abyssonis",
+        "types": [
+          "water",
+          "dragon"
+        ],
+        "image": "images/pokemon/abyssonis.png",
+        "formType": "base"
+      },
+      "spiritbound": {
+        "name": "SB-Abyssonis",
+        "fullName": "SB-Abyssonis",
+        "types": [
+          "water",
+          "dragon",
+          "steel"
+        ],
+        "image": "images/pokemon/abyssonis.png",
+        "formType": "gimmick"
+      }
+    }
+  },
+  {
+    "dex": 132,
+    "speciesId": "hesprite",
+    "name": "Hesprite",
+    "stage": 1,
+    "maxStage": 3,
+    "family": [
+      "hesprite",
+      "hesperyad",
+      "hessaia"
+    ],
+    "parents": [],
+    "children": [
+      "hesperyad"
+    ],
+    "cry": "sounds/pokemon/hesprite.mp3",
+    "forms": {
+      "base": {
+        "name": "Hesprite",
+        "fullName": "Hesprite",
+        "types": [
+          "grass"
+        ],
+        "image": "images/pokemon/hesprite.png",
+        "formType": "base"
+      }
+    }
+  },
+  {
+    "dex": 133,
+    "speciesId": "hesperyad",
+    "name": "Hesperyad",
+    "stage": 2,
+    "maxStage": 3,
+    "family": [
+      "hesprite",
+      "hesperyad",
+      "hessaia"
+    ],
+    "parents": [
+      "hesprite"
+    ],
+    "children": [
+      "hessaia"
+    ],
+    "cry": "sounds/pokemon/hesperyad.mp3",
+    "forms": {
+      "base": {
+        "name": "Hesperyad",
+        "fullName": "Hesperyad",
+        "types": [
+          "grass",
+          "fairy"
+        ],
+        "image": "images/pokemon/hesperyad.png",
+        "formType": "base"
+      }
+    }
+  },
+  {
+    "dex": 134,
+    "speciesId": "hessaia",
+    "name": "Hessaia",
+    "stage": 3,
+    "maxStage": 3,
+    "family": [
+      "hesprite",
+      "hesperyad",
+      "hessaia"
+    ],
+    "parents": [
+      "hesperyad"
+    ],
+    "children": [],
+    "cry": "sounds/pokemon/hessaia.mp3",
+    "forms": {
+      "base": {
+        "name": "Hessaia",
+        "fullName": "Hessaia",
+        "types": [
+          "grass",
+          "fairy"
+        ],
+        "image": "images/pokemon/hessaia.png",
+        "formType": "base"
+      },
+      "spiritbound": {
+        "name": "SB-Hessaia",
+        "fullName": "SB-Hessaia",
+        "types": [
+          "grass",
+          "fairy",
+          "psychic"
+        ],
+        "image": "images/pokemon/hessaia.png",
+        "formType": "gimmick"
+      }
+    }
+  },
+  {
+    "dex": 135,
+    "speciesId": "marshland",
+    "name": "Marshland",
+    "stage": 1,
+    "maxStage": 1,
+    "family": [
+      "marshland"
+    ],
+    "parents": [],
+    "children": [],
+    "cry": "sounds/pokemon/marshland.mp3",
+    "forms": {
+      "base": {
+        "name": "Marshland",
+        "fullName": "Marshland",
+        "types": [
+          "grass",
+          "flying"
+        ],
+        "image": "images/pokemon/marshland.png",
+        "formType": "base"
+      },
+      "spiritbound": {
+        "name": "SB-Marshland",
+        "fullName": "SB-Marshland",
+        "types": [
+          "grass",
+          "flying",
+          "poison"
+        ],
+        "image": "images/pokemon/marshland.png",
+        "formType": "gimmick"
+      }
+    }
+  },
+  {
+    "dex": 136,
+    "speciesId": "windswept",
+    "name": "Windswept",
+    "stage": 1,
+    "maxStage": 1,
+    "family": [
+      "windswept"
+    ],
+    "parents": [],
+    "children": [],
+    "cry": "sounds/pokemon/windswept.mp3",
+    "forms": {
+      "base": {
+        "name": "Windswept",
+        "fullName": "Windswept",
+        "types": [
+          "rock",
+          "fighting"
+        ],
+        "image": "images/pokemon/windswept.png",
+        "formType": "base"
+      },
+      "spiritbound": {
+        "name": "SB-Windswept",
+        "fullName": "SB-Windswept",
+        "types": [
+          "rock",
+          "fighting",
+          "electric"
+        ],
+        "image": "images/pokemon/windswept.png",
+        "formType": "gimmick"
+      }
+    }
+  },
+  {
+    "dex": 137,
+    "speciesId": "mesa",
+    "name": "Mesa",
+    "stage": 1,
+    "maxStage": 1,
+    "family": [
+      "mesa"
+    ],
+    "parents": [],
+    "children": [],
+    "cry": "sounds/pokemon/mesa.mp3",
+    "forms": {
+      "base": {
+        "name": "Mesa",
+        "fullName": "Mesa",
+        "types": [
+          "fire",
+          "psychic"
+        ],
+        "image": "images/pokemon/mesa.png",
+        "formType": "base"
+      },
+      "spiritbound": {
+        "name": "SB-Mesa",
+        "fullName": "SB-Mesa",
+        "types": [
+          "fire",
+          "psychic",
+          "ground"
+        ],
+        "image": "images/pokemon/mesa.png",
+        "formType": "gimmick"
+      }
+    }
+  },
+  {
+    "dex": 138,
+    "speciesId": "mountain",
+    "name": "Mountain",
+    "stage": 1,
+    "maxStage": 1,
+    "family": [
+      "mountain"
+    ],
+    "parents": [],
+    "children": [],
+    "cry": "sounds/pokemon/mountain.mp3",
+    "forms": {
+      "base": {
+        "name": "Mountain",
+        "fullName": "Mountain",
+        "types": [
+          "ice",
+          "ground"
+        ],
+        "image": "images/pokemon/mountain.png",
+        "formType": "base"
+      },
+      "spiritbound": {
+        "name": "SB-Mountain",
+        "fullName": "SB-Mountain",
+        "types": [
+          "ice",
+          "ground",
+          "normal"
+        ],
+        "image": "images/pokemon/mountain.png",
+        "formType": "gimmick"
+      }
+    }
+  },
+  {
+    "dex": 139,
+    "speciesId": "purgatory",
+    "name": "Purgatory",
+    "stage": 1,
+    "maxStage": 1,
+    "family": [
+      "purgatory"
+    ],
+    "parents": [],
+    "children": [],
+    "cry": "sounds/pokemon/purgatory.mp3",
+    "forms": {
+      "form-ruin": {
+        "name": "Purgatory",
+        "fullName": "Purgatory[Ruin]",
+        "types": [
+          "poison",
+          "rock"
+        ],
+        "image": "images/pokemon/purgatory.png",
+        "formType": "cosmetic"
+      },
+      "form-paradise": {
+        "name": "Purgatory",
+        "fullName": "Purgatory[Paradise]",
+        "types": [
+          "grass",
+          "rock"
+        ],
+        "image": "images/pokemon/purgatory.png",
+        "formType": "cosmetic"
+      }
+    }
+  },
+  {
+    "dex": 140,
+    "speciesId": "harbinger",
+    "name": "Harbinger",
+    "stage": 1,
+    "maxStage": 1,
+    "family": [
+      "harbinger"
+    ],
+    "parents": [],
+    "children": [],
+    "cry": "sounds/pokemon/harbinger.mp3",
+    "forms": {
+      "base": {
+        "name": "Harbinger",
+        "fullName": "Harbinger",
+        "types": [
+          "psychic",
+          "bug"
+        ],
+        "image": "images/pokemon/harbinger.png",
+        "formType": "base"
+      }
+    }
+  },
+  {
+    "dex": 141,
+    "speciesId": "heart",
+    "name": "Heart",
+    "stage": 1,
+    "maxStage": 1,
+    "family": [
+      "heart"
+    ],
+    "parents": [],
+    "children": [],
+    "cry": "sounds/pokemon/heart.mp3",
+    "forms": {
+      "base": {
+        "name": "Heart",
+        "fullName": "Heart",
+        "types": [
+          "fairy",
+          "ground"
+        ],
+        "image": "images/pokemon/heart.png",
+        "formType": "base"
+      },
+      "spiritbound": {
+        "name": "SB-Heart",
+        "fullName": "SB-Heart",
+        "types": [
+          "fairy",
+          "ground",
+          "electric"
+        ],
+        "image": "images/pokemon/heart.png",
+        "formType": "gimmick"
+      }
+    }
+  },
+  {
+    "dex": 142,
+    "speciesId": "series",
+    "name": "Series",
+    "stage": 1,
+    "maxStage": 1,
+    "family": [
+      "series"
+    ],
+    "parents": [],
+    "children": [],
+    "cry": "sounds/pokemon/series.mp3",
+    "forms": {
+      "base": {
+        "name": "Series",
+        "fullName": "Series",
+        "types": [
+          "ghost",
+          "fighting"
+        ],
+        "image": "images/pokemon/series.png",
+        "formType": "base"
+      },
+      "spiritbound": {
+        "name": "SB-Series",
+        "fullName": "SB-Series",
+        "types": [
+          "ghost",
+          "fighting",
+          "water"
+        ],
+        "image": "images/pokemon/series.png",
+        "formType": "gimmick"
+      }
+    }
+  },
+  {
+    "dex": 143,
+    "speciesId": "rng",
+    "name": "RNG",
+    "stage": 1,
+    "maxStage": 1,
+    "family": [
+      "rng"
+    ],
+    "parents": [],
+    "children": [],
+    "cry": "sounds/pokemon/rng.mp3",
+    "forms": {
+      "base": {
+        "name": "RNG",
+        "fullName": "RNG",
+        "types": [
+          "mystery"
+        ],
+        "image": "images/pokemon/rng.png",
+        "formType": "base"
+      },
+      "spiritbound": {
+        "name": "SB-RNG",
+        "fullName": "SB-RNG",
+        "types": [
+          "mystery"
+        ],
+        "image": "images/pokemon/rng.png",
+        "formType": "gimmick"
+      }
+    }
+  },
+  {
+    "dex": 144,
+    "speciesId": "daniel",
+    "name": "Daniel",
+    "stage": 1,
+    "maxStage": 2,
+    "family": [
+      "daniel",
+      "dave"
+    ],
+    "parents": [],
+    "children": [
+      "dave"
+    ],
+    "cry": "sounds/pokemon/daniel.mp3",
+    "forms": {
+      "base": {
+        "name": "Daniel",
+        "fullName": "Daniel",
+        "types": [
+          "normal",
+          "fairy"
+        ],
+        "image": "images/pokemon/daniel.png",
+        "formType": "base"
+      }
+    }
+  },
+  {
+    "dex": 145,
+    "speciesId": "dave",
+    "name": "Dave",
+    "stage": 2,
+    "maxStage": 2,
+    "family": [
+      "daniel",
+      "dave"
+    ],
+    "parents": [
+      "daniel"
+    ],
+    "children": [],
+    "cry": "sounds/pokemon/dave.mp3",
+    "forms": {
+      "base": {
+        "name": "Dave",
+        "fullName": "Dave",
+        "types": [
+          "normal",
+          "fairy"
+        ],
+        "image": "images/pokemon/dave.png",
+        "formType": "base"
+      }
+    }
+  }
+];

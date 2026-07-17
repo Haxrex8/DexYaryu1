@@ -1,0 +1,542 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Custom Pokédex (Fixed)</title>
+
+<style>
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background: #cfcfcf;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.pokedex-card {
+    width: min(1200px, 95vw);
+    background: white;
+    border-radius: 30px;
+    padding: 40px;
+    text-align: center;
+    box-shadow: 0 15px 40px rgba(0,0,0,0.35);
+}
+
+.pokemon-image {
+    width: 100%;
+    max-width: 900px;
+    height: auto;
+}
+
+.number {
+    font-size: 24px;
+    color: gray;
+    margin-top: 10px;
+}
+
+.name {
+    font-size: 52px;
+    font-weight: bold;
+    margin: 20px 0;
+}
+
+.types {
+    display: flex;
+    justify-content: center;
+    gap: 12px;
+    flex-wrap: wrap;
+    margin-top: 20px;
+}
+
+.type {
+    padding: 10px 16px;
+    border-radius: 30px;
+    font-weight: bold;
+    font-size: 18px;
+    color: white;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.type-icon {
+    width: 24px;
+    height: 24px;
+}
+
+.normal { background:#9da0a2; }
+.fire { background:#f4313f; }
+.water { background:#00b2e2; }
+.electric { background:#e0cc00; color:black; }
+.grass { background:#00ae41; }
+.ice { background:#82dade; color:black; }
+.fighting { background:#d79a2a; }
+.poison { background:#a77bc8; }
+.ground { background:#ca8241; color:black; }
+.flying { background:#56b3e4; }
+.psychic { background:#f67eb4; }
+.bug { background:#a8c27e; }
+.rock { background:#8b8179; }
+.ghost { background:#a67db1; }
+.dragon { background:#0083ae; }
+.dark { background:#5a6771; }
+.steel { background:#979899; color:black; }
+.fairy { background:#f3b1db; color:black; }
+
+.nav {
+    margin-top: 20px;
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    flex-wrap: wrap;
+}
+
+button {
+    padding: 12px 18px;
+    font-size: 16px;
+    border: none;
+    border-radius: 12px;
+    cursor: pointer;
+    background: #333;
+    color: white;
+}
+
+button:hover { background: #555; }
+
+input, select {
+    padding: 10px;
+    font-size: 14px;
+}
+</style>
+</head>
+
+<body>
+
+<div class="pokedex-card">
+
+    <img id="img" class="pokemon-image">
+
+    <div class="number" id="num"></div>
+    <div class="name" id="name"></div>
+
+    <div class="types" id="types"></div>
+
+    <div class="nav">
+        <button onclick="prev()">⬅ Prev</button>
+        <button onclick="next()">Next ➡</button>
+        <button onclick="randomPokemon()">🎲 Random</button>
+    </div>
+
+    <div class="nav">
+        <input id="searchInput" placeholder="Search Pokémon">
+        <select id="typeFilter">
+            <option value="">All Types</option>
+            <option value="grass">Grass</option>
+            <option value="fire">Fire</option>
+            <option value="water">Water</option>
+            <option value="electric">Electric</option>
+            <option value="ice">Ice</option>
+            <option value="fighting">Fighting</option>
+            <option value="poison">Poison</option>
+            <option value="ground">Ground</option>
+            <option value="flying">Flying</option>
+            <option value="psychic">Psychic</option>
+            <option value="bug">Bug</option>
+            <option value="rock">Rock</option>
+            <option value="ghost">Ghost</option>
+            <option value="dragon">Dragon</option>
+            <option value="dark">Dark</option>
+            <option value="steel">Steel</option>
+            <option value="fairy">Fairy</option>
+            <option value="normal">Normal</option>
+        </select>
+    </div>
+
+</div>
+
+<script>
+
+/* ================= SAFE HELPERS ================= */
+
+function normalizeName(name) {
+    return name
+        .replace(/^(SB-|Y-|Z-)/, "")
+        .trim();
+}
+
+function safeFileName(name) {
+    return name.replace(/\s+/g, "_").replace(/[^a-zA-Z0-9_\-]/g, "");
+}
+
+/* ================= DATA (STRUCTURED) ================= */
+
+const rawList = [
+"Kakalil (Grass)",
+"Fronglow (Grass)",
+"Verdalete (Grass/Fighting)",
+"SB-Verdalete (Grass/Fighting/Ground)",
+"Scorchirp (Fire)",
+"Pyrill (Fire)",
+"Reviling (Fire/Flying)",
+"SB-Reviling (Fire/Flying/Ghost)",
+"Salhoy (Water)",
+"Brookaneer (Water)",
+"Cragsair (Water/Rock)",
+"SB-Cragsair (Water/Rock/Ice)",
+"Generouse (Normal)",
+"Gaverden (Normal/Grass)",
+"SB-Gaverden (Normal/Grass/Fire)",
+"Reedwing (Bug)",
+"Skiveling (Bug)",
+"Hivenante (Bug/Flying)",
+"SB-Hivenante (Bug/Flying/Dragon)",
+"Myrtaburreau (Bug/Ground)",
+"SB-Myrtaburreau (Bug/Ground/Dragon)",
+"Azuruff (Normal)",
+"Sappherd (Normal/Fighting)",
+"SB-Sappherd (Normal/Fighting/Rock)",
+"Chicketeer (Normal/Flying)",
+"Fowliant (Normal/Flying)",
+"Bryopillar (Grass/Poison)",
+"Empreenoss (Grass/Poison)",
+"SB-Empreenoss (Grass/Poison/Bug)",
+"Primelight (Electric/Grass)",
+"Book1 (Psychic)",
+"Book2 (Psychic)",
+"Book3 (Psychic/Steel)",
+"SB-Book3 (Psychic/Steel/Grass)",
+"Vimivolt (Fairy/Electric)",
+"Etheriwatt (Fairy/Electric)",
+"Serampere (Fairy/Electric)",
+"SB-Serampere (Fairy/Electric/Flying)",
+"FishVegas (Water)",
+"Spravian (Ghost)",
+"Macabrev (Ghost)",
+"Phandaver (Ghost/Flying)",
+"SB-Phandaver (Ghost/Flying/Ice)",
+"Blossool (Normal/Fairy)",
+"Walmart (Bug)",
+"Moai (Water)",
+"Harold1 (Bug)",
+"Harold2 (Bug)",
+"Harold3 (Bug)",
+"Wispark (Dark/Electric)",
+"Sorserous (Dark/Electric)",
+"Y-Skiddo (Ground)",
+"Y-Gogoat (Ground)",
+"Goblin (Ice)",
+"Goblin2 (Dark/Ice)",
+"SB-Goblin2 (Dark/Ice/Ghost)",
+"Y-Miltank (Normal/Poison)",
+"Vikings (Ice)",
+"Vikings2 (Ice/Steel)",
+"Vikings3 (Ice/Steel)",
+"Villagers (Rock)",
+"Villagers2 (Rock)",
+"Zach (Dark/Flying)",
+"Zach2 (Dark/Flying)",
+"SB-Zach2 (Dark/Flying/Poison)",
+"Furuse (Normal/Fire)",
+"Scarsplode (Normal/Fire)",
+"SB-Scarsplode (Normal/Fire/Dark)",
+"Bullicose (Fighting)",
+"SB-Bullicose (Fighting/Flying/Water)",
+"Lucibbit (Water/Psychic)",
+"SB-Lucibbit (Water/Psychic/Bug)",
+"Boys (Fire/Water)",
+"Border (Poison/Fighting)",
+"Border2 (Poison/Fighting)",
+"Brother (Electric/Ghost)",
+"Brother2 (Electric/Ghost)",
+"SB-Brother2 (Electric/Ghost/Dark)",
+"Denkana (Electric/Poison)",
+"SB-Denkana (Electric/Poison/Ghost)",
+"Tom (Dark/Steel)",
+"Tom2 (Dark/Steel)",
+"SB-Tom2 (Dark/Steel/Normal)",
+"Parrot1 (Steel/Ghost)",
+"Parrot2 (Steel/Ghost)",
+"Parrot3 (Steel/Ghost)",
+"SB-Parrot3 (Steel/Ghost/Fighting)",
+"PandaL (Fairy)",
+"PandaL2 (Fairy/Fighting)",
+"Y-Phantump (Normal/Fire)",
+"Y-Trevanent (Normal/Fire)",
+"Y-Ducklett (Fighting/Flying)",
+"Y-Swanna (Fighting/Flying)",
+"Y-Cetoddle (Ice/Flying)",
+"Y-Cetitan (Ice/Flying)",
+"Dennis (Water/Ghost)",
+"Dennis2 (Water/Ghost)",
+"Pablo (Rock/Grass)",
+"Pablo2 (Rock/Grass)",
+"Pawrietal (Rock/Ground)",
+"Lucerolith (Rock/Ground)",
+"Y-Maractus (Fire/Dark)",
+"Y-Maractus2 (Fire/Dark)",
+"Invalid (Ice)",
+"Invalid (Rock/Fire)",
+"SB-Invalid (Rock/Fire/Ice)",
+"Y-Wobbuffet (Normal/Ice)",
+"Osmauranaut (Psychic/Flying)",
+"SB-Osmauranaut (Psychic/Flying/Steel)",
+"Effithread (Normal/Ghost)",
+"Harmoneon (Normal)",
+"Y-Varoom (Steel/Electric)",
+"Y-Revavroom (Steel/Electric)",
+"Timberwoof (Grass/Normal)",
+"Alupine (Grass/Normal)",
+"Alvu3 (Grass/Dark)",
+"SB-Alvu3 (Grass/Dark/Flying)",
+"Aerieow (Normal/Flying)",
+"Aquilleo (Normal/Flying)",
+"Elyosse3 (Steel/Flying)",
+"SB-Elyosse3 (Steel/Flying/Grass)",
+"Y-Seviper (Ice/Poison)",
+"Y-Zangoose (Fire/Ground)",
+"Elementalists1 (Normal)",
+"Elementalists2 (Fire)",
+"Elementalists3 (Water)",
+"Elementalists4 (Ground)",
+"Elementalists5 (Flying)",
+"Y-Luvdisc (Water/Fairy)",
+"Y-Luvdisc2 (Water/Fairy)",
+"Mal (Water/Ground)",
+"SB-Mal (Water/Ground/Bug)",
+"Zeostisum (Water/Poison)",
+"SB-Zeostisum (Water/Poison/Rock)",
+"Miles (Water/Steel)",
+"SB-Miles (Water/Steel/Fairy)",
+"Cirrince (Water/Flying)",
+"Caelmeir (Water/Flying)",
+"Majestide (Water/Flying)",
+"Gumball (Normal/Psychic)",
+"Gumball2 (Normal/Psychic)",
+"SB-Gumball2 (Normal/Psychic/Dark)",
+"Panda (Normal/Ghost)",
+"Panda2 (Normal/Ghost)",
+"SB-Panda2 (Normal/Ghost/Fire)",
+"CAT (Grass/Fighting)",
+"CAT (Normal/Fighting)",
+"Echoes (Ghost)",
+"Y-Solosis (Water/Psychic)",
+"Y-Duosion (Water/Psychic)",
+"Y-Reuinclus (Water/Psychic)",
+"Smoldreir (Fire)",
+"Crimarsiken (Fire/Poison)",
+"SB-Crimarsiken (Fire/Poison/Psychic)",
+"Mesmerade (Psychic)",
+"Renumbra (Psychic/Dark)",
+"SB-Renumbra (Psychic/Dark/Fairy)",
+"Lumiora (Fairy/Fire)",
+"Lumiora (Fairy/Dragon)",
+"Astravelle (Fairy/Dragon)",
+"SB-Astravelle (Fairy/Dragon/Fire)",
+"Sunadrax (Ground/Dragon)",
+"SB-Sunadrax (Ground/Dragon/Fighting)",
+"Cuddaclysm (Dark/Dragon)",
+"Maliscorn (Dark/Dragon)",
+"SB-Maliscorn (Dark/Dragon/Poison)",
+"Lutrumi (Water)",
+"Kaligaurd (Water/Dragon)",
+"Abyssonis (Water/Dragon)",
+"SB-Abyssonis (Water/Dragon/Steel)",
+"Hesprite (Grass)",
+"Hesperyad (Grass/Fairy)",
+"Hessaia (Grass/Fairy)",
+"SB-Hessaia (Grass/Fairy/Psychic)",
+"Marshland (Grass/Flying)",
+"SB-Marshland (Grass/Flying/Poison)",
+"Windswept (Rock/Fighting)",
+"SB-Windswept (Rock/Fighting/Electric)",
+"Mesa (Fire/Psychic)",
+"SB-Mesa (Fire/Psychic/Ground)",
+"Mountain (Ice/Ground)",
+"SB-Mountain (Ice/Ground/Normal)",
+"Purgatory (Poison/Rock)",
+"Purgatory (Grass/Rock)",
+"Harbinger (Psychic/Bug)",
+"Heart (Fairy/Ground)",
+"SB-Heart (Fairy/Ground/Electric)",
+"Series (Ghost/Fighting)",
+"SB-Series (Ghost/Fighting/Water)",
+"RNG (Mystery)",
+"SB-RNG (Mystery)",
+"Daniel (Normal/Fairy)",
+"Dave (Normal/Fairy)"
+];
+
+/* ================= PARSE ================= */
+
+const pokedex = rawList.map(line => {
+    const match = line.match(/^(.+?)\s*\((.+?)\)$/);
+    const name = match[1].trim();
+    const types = match[2].split("/").map(t => t.trim().toLowerCase());
+
+    return {
+        name,
+        base: normalizeName(name),
+        types
+    };
+});
+
+/* ================= DEX ASSIGN ================= */
+
+const dexMap = new Map();
+let dexCounter = 1;
+
+pokedex.forEach(p => {
+    if (!dexMap.has(p.base)) dexMap.set(p.base, dexCounter++);
+    p.dex = dexMap.get(p.base);
+});
+
+/* ================= STATE ================= */
+
+let index = 0;
+let filtered = pokedex;
+
+/* ================= UI ================= */
+
+function cap(s) {
+    return s.charAt(0).toUpperCase() + s.slice(1);
+}
+
+function renderTypes(types) {
+    const el = document.getElementById("types");
+    el.innerHTML = "";
+
+    types.forEach(t => {
+        const div = document.createElement("div");
+        div.className = "type " + t;
+
+        div.innerHTML = `<img class="type-icon" src="${t}.png"> ${cap(t)}`;
+        el.appendChild(div);
+    });
+}
+
+function showPokemon(p) {
+    document.getElementById("name").textContent = p.name;
+    document.getElementById("num").textContent = `#${String(p.dex).padStart(3, "0")}`;
+    renderTypes(p.types);
+}
+
+function showLocked(p) {
+    document.getElementById("name").textContent = "???";
+    document.getElementById("num").textContent = `#${String(p.dex).padStart(3, "0")}`;
+    document.getElementById("types").innerHTML = "";
+}
+
+/* ================= IMAGE ================= */
+
+function render(i) {
+    if (!filtered.length) return;
+
+    const p = filtered[i];
+    const img = document.getElementById("img");
+
+    const file = safeFileName(p.name) + ".png";
+    const test = new Image();
+
+    test.onload = () => {
+        img.src = file;
+        showPokemon(p);
+    };
+
+    test.onerror = () => {
+        console.warn("Missing image:", file);
+        img.src = "locked.png";
+        showLocked(p);
+    };
+
+    test.src = file;
+}
+
+/* ================= FILTER (DEBOUNCED) ================= */
+
+function debounce(fn, delay) {
+    let t;
+    return (...args) => {
+        clearTimeout(t);
+        t = setTimeout(() => fn(...args), delay);
+    };
+}
+
+function applyFilters() {
+    const search = document.getElementById("searchInput").value.toLowerCase().trim();
+    const type = document.getElementById("typeFilter").value;
+
+    filtered = pokedex.filter(p => {
+        const matchesName = !search || p.name.toLowerCase().includes(search);
+        const matchesType = !type || p.types.includes(type);
+        return matchesName && matchesType;
+    });
+
+    index = 0;
+    render(index);
+}
+
+const applyFiltersDebounced = debounce(applyFilters, 150);
+
+/* ================= NAV ================= */
+
+function next() {
+    if (!filtered.length) return;
+    index = (index + 1) % filtered.length;
+    render(index);
+}
+
+function prev() {
+    if (!filtered.length) return;
+    index = (index - 1 + filtered.length) % filtered.length;
+    render(index);
+}
+
+function randomPokemon() {
+    if (!filtered.length) return;
+
+    let newIndex;
+    do {
+        newIndex = Math.floor(Math.random() * filtered.length);
+    } while (newIndex === index && filtered.length > 1);
+
+    index = newIndex;
+    render(index);
+}
+
+/* ================= EVENTS ================= */
+
+document.getElementById("searchInput").addEventListener("input", applyFiltersDebounced);
+document.getElementById("typeFilter").addEventListener("change", applyFiltersDebounced);
+
+let touchStartX = 0;
+
+document.addEventListener("touchstart", e => {
+    touchStartX = e.changedTouches[0].screenX;
+});
+
+document.addEventListener("touchend", e => {
+    if (!filtered.length) return;
+
+    const diff = touchStartX - e.changedTouches[0].screenX;
+
+    if (diff > 50) next();
+    else if (diff < -50) prev();
+});
+
+/* ================= INIT ================= */
+
+function init() {
+    filtered = pokedex;
+    index = 0;
+    render(index);
+}
+
+init();
+
+</script>
+
+</body>
+</html>
