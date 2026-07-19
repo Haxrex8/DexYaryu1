@@ -39,6 +39,22 @@ function getCurrent() {
   return filtered[currentIndex];
 }
 
+function jumpToSpecies(speciesId) {
+  // Reset filters so every Pokémon can be found
+  UI.search.value = "";
+  UI.typeFilter.value = "";
+
+  applyFilters();
+
+  const idx = filtered.findIndex(
+    p => p.speciesId === speciesId
+  );
+
+  if (idx >= 0) {
+    setIndex(idx);
+  }
+}
+
 function formatFormLabel(key, meta) {
   if (meta?.formType === "base") return "Base";
   if (meta?.formType === "spiritbound") return "Spiritbound";
@@ -106,9 +122,29 @@ function renderEvolution(entry) {
     const item = document.createElement("span");
     item.className = "evo-item";
 
-    const safeName = name ?? "";
-    item.textContent =
-      safeName.charAt(0).toUpperCase() + safeName.slice(1);
+    if (!name) {
+    item.textContent = "???";
+    item.classList.add("hidden-evo");
+    UI.evo.appendChild(item);
+
+    if (i < chain.length - 1) {
+    const arrow = document.createElement("span");
+    arrow.className = "evo-arrow";
+    arrow.textContent = "→";
+    UI.evo.appendChild(arrow);
+    }
+
+    return;
+  }
+
+item.textContent =
+  name.charAt(0).toUpperCase() + name.slice(1);
+
+item.onclick = () => {
+  if (!name) return;
+
+  jumpToSpecies(name);
+};
 
     item.onclick = () => {
   const target = pokedex.find(p => p.speciesId === name);
@@ -190,12 +226,9 @@ function renderFavoritesPanel() {
     div.className = "favorite-item";
     div.textContent = `#${String(p.dex).padStart(3, "0")} ${p.name}`;
 
-    div.onclick = () => {
-      const idx = filtered.findIndex(x =>
-        x.speciesId === p.speciesId
-      );
-      if (idx >= 0) setIndex(idx);
-    };
+   div.onclick = () => {
+  jumpToSpecies(p.speciesId);
+};
 
     UI.favPanel.appendChild(div);
   });
@@ -292,11 +325,8 @@ function renderTeam() {
     `;
 
     card.onclick = () => {
-      const idx = filtered.findIndex(x =>
-        x.speciesId === p.speciesId
-      );
-      if (idx >= 0) setIndex(idx);
-    };
+  jumpToSpecies(p.speciesId);
+};
 
     wrapper.appendChild(card);
   });

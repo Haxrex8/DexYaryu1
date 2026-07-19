@@ -5,14 +5,16 @@ export const pokedex = [
     "name": "Kakalil",
     "family": [
       "kakalil",
-      "fronglow",
-      "verdalete"
+      null,
+      null
     ],
     "stage": 1,
     "maxStage": 3,
     "parents": [],
     "children": [],
-    "cry": "sounds/pokemon/kakalil.mp3",
+    "cry": {
+      "base": "sounds/pokemon/kakalil.mp3"
+    },
     "forms": {
       "base": {
         "name": "Kakalil",
@@ -21,6 +23,7 @@ export const pokedex = [
           "grass"
         ],
         "image": "images/pokemon/kakalil.png",
+        "cry": "sounds/pokemon/kakalil.mp3",
         "hasImage": true,
         "formType": "base"
       }
@@ -32,14 +35,16 @@ export const pokedex = [
     "name": "Scorchirp",
     "family": [
       "scorchirp",
-      "pyrill",
-      "reviling"
+      null,
+      null
     ],
     "stage": 1,
     "maxStage": 3,
     "parents": [],
     "children": [],
-    "cry": "sounds/pokemon/scorchirp.mp3",
+    "cry": {
+      "base": "sounds/pokemon/scorchirp.mp3"
+    },
     "forms": {
       "base": {
         "name": "Scorchirp",
@@ -48,6 +53,7 @@ export const pokedex = [
           "fire"
         ],
         "image": "images/pokemon/scorchirp.png",
+        "cry": "sounds/pokemon/scorchirp.mp3",
         "hasImage": true,
         "formType": "base"
       }
@@ -59,14 +65,16 @@ export const pokedex = [
     "name": "Salhoy",
     "family": [
       "salhoy",
-      "brookaneer",
-      "cragsair"
+      null,
+      null
     ],
     "stage": 1,
     "maxStage": 3,
     "parents": [],
     "children": [],
-    "cry": "sounds/pokemon/salhoy.mp3",
+    "cry": {
+      "base": "sounds/pokemon/salhoy.mp3"
+    },
     "forms": {
       "base": {
         "name": "Salhoy",
@@ -75,6 +83,7 @@ export const pokedex = [
           "water"
         ],
         "image": "images/pokemon/salhoy.png",
+        "cry": "sounds/pokemon/salhoy.mp3",
         "hasImage": true,
         "formType": "base"
       }
@@ -86,13 +95,15 @@ export const pokedex = [
     "name": "Generouse",
     "family": [
       "generouse",
-      "gaverden"
+      null
     ],
     "stage": 1,
     "maxStage": 2,
     "parents": [],
     "children": [],
-    "cry": "sounds/pokemon/generouse.mp3",
+    "cry": {
+      "base": "sounds/pokemon/generouse.mp3"
+    },
     "forms": {
       "base": {
         "name": "Generouse",
@@ -101,6 +112,7 @@ export const pokedex = [
           "normal"
         ],
         "image": "images/pokemon/generouse.png",
+        "cry": "sounds/pokemon/generouse.mp3",
         "hasImage": true,
         "formType": "base"
       }
@@ -112,14 +124,16 @@ export const pokedex = [
     "name": "Reedwing",
     "family": [
       "reedwing",
-      "skiveling",
-      "hivenante"
+      null,
+      null
     ],
     "stage": 1,
     "maxStage": 3,
     "parents": [],
     "children": [],
-    "cry": "sounds/pokemon/reedwing.mp3",
+    "cry": {
+      "base": "sounds/pokemon/reedwing.mp3"
+    },
     "forms": {
       "base": {
         "name": "Reedwing",
@@ -128,6 +142,7 @@ export const pokedex = [
           "bug"
         ],
         "image": "images/pokemon/reedwing.png",
+        "cry": "sounds/pokemon/reedwing.mp3",
         "hasImage": true,
         "formType": "base"
       }
@@ -139,13 +154,15 @@ export const pokedex = [
     "name": "Azuruff",
     "family": [
       "azuruff",
-      "sappherd"
+      null
     ],
     "stage": 1,
     "maxStage": 2,
     "parents": [],
     "children": [],
-    "cry": "sounds/pokemon/azuruff.mp3",
+    "cry": {
+      "base": "sounds/pokemon/azuruff.mp3"
+    },
     "forms": {
       "base": {
         "name": "Azuruff",
@@ -154,6 +171,7 @@ export const pokedex = [
           "normal"
         ],
         "image": "images/pokemon/azuruff.png",
+        "cry": "sounds/pokemon/azuruff.mp3",
         "hasImage": true,
         "formType": "base"
       }
@@ -165,13 +183,15 @@ export const pokedex = [
     "name": "Chicketeer",
     "family": [
       "chicketeer",
-      "fowliant"
+      null
     ],
     "stage": 1,
     "maxStage": 2,
     "parents": [],
     "children": [],
-    "cry": "sounds/pokemon/chicketeer.mp3",
+    "cry": {
+      "base": "sounds/pokemon/chicketeer.mp3"
+    },
     "forms": {
       "base": {
         "name": "Chicketeer",
@@ -181,6 +201,7 @@ export const pokedex = [
           "flying"
         ],
         "image": "images/pokemon/chicketeer.png",
+        "cry": "sounds/pokemon/chicketeer.mp3",
         "hasImage": true,
         "formType": "base"
       }
@@ -192,13 +213,15 @@ export const pokedex = [
     "name": "Bryopillar",
     "family": [
       "bryopillar",
-      "empreenoss"
+      null
     ],
     "stage": 1,
     "maxStage": 2,
     "parents": [],
     "children": [],
-    "cry": "sounds/pokemon/bryopillar.mp3",
+    "cry": {
+      "base": "sounds/pokemon/bryopillar.mp3"
+    },
     "forms": {
       "base": {
         "name": "Bryopillar",
@@ -208,6 +231,7 @@ export const pokedex = [
           "poison"
         ],
         "image": "images/pokemon/bryopillar.png",
+        "cry": "sounds/pokemon/bryopillar.mp3",
         "hasImage": true,
         "formType": "base"
       }
@@ -224,7 +248,9 @@ export const pokedex = [
     "maxStage": 1,
     "parents": [],
     "children": [],
-    "cry": "sounds/pokemon/primelight.mp3",
+    "cry": {
+      "base": "sounds/pokemon/primelight.mp3"
+    },
     "forms": {
       "base": {
         "name": "Primelight",
@@ -234,6 +260,7 @@ export const pokedex = [
           "grass"
         ],
         "image": "images/pokemon/primelight.png",
+        "cry": "sounds/pokemon/primelight.mp3",
         "hasImage": true,
         "formType": "base"
       }
@@ -245,14 +272,16 @@ export const pokedex = [
     "name": "Vimivolt",
     "family": [
       "vimivolt",
-      "etheriwatt",
-      "serampere"
+      null,
+      null
     ],
     "stage": 1,
     "maxStage": 3,
     "parents": [],
     "children": [],
-    "cry": "sounds/pokemon/vimivolt.mp3",
+    "cry": {
+      "base": "sounds/pokemon/vimivolt.mp3"
+    },
     "forms": {
       "base": {
         "name": "Vimivolt",
@@ -262,6 +291,7 @@ export const pokedex = [
           "electric"
         ],
         "image": "images/pokemon/vimivolt.png",
+        "cry": "sounds/pokemon/vimivolt.mp3",
         "hasImage": true,
         "formType": "base"
       }
@@ -273,14 +303,16 @@ export const pokedex = [
     "name": "Spravian",
     "family": [
       "spravian",
-      "macabrev",
-      "phandaver"
+      null,
+      null
     ],
     "stage": 1,
     "maxStage": 3,
     "parents": [],
     "children": [],
-    "cry": "sounds/pokemon/spravian.mp3",
+    "cry": {
+      "base": "sounds/pokemon/spravian.mp3"
+    },
     "forms": {
       "base": {
         "name": "Spravian",
@@ -289,6 +321,7 @@ export const pokedex = [
           "ghost"
         ],
         "image": "images/pokemon/spravian.png",
+        "cry": "sounds/pokemon/spravian.mp3",
         "hasImage": true,
         "formType": "base"
       }
@@ -305,7 +338,9 @@ export const pokedex = [
     "maxStage": 1,
     "parents": [],
     "children": [],
-    "cry": "sounds/pokemon/blossool.mp3",
+    "cry": {
+      "base": "sounds/pokemon/blossool.mp3"
+    },
     "forms": {
       "base": {
         "name": "Blossool",
@@ -315,56 +350,9 @@ export const pokedex = [
           "fairy"
         ],
         "image": "images/pokemon/blossool.png",
+        "cry": "sounds/pokemon/blossool.mp3",
         "hasImage": true,
         "formType": "base"
-      }
-    }
-  },
-  {
-    "dex": 85,
-    "speciesId": "invalid",
-    "name": "Invalid",
-    "family": [
-      "invalid"
-    ],
-    "stage": 1,
-    "maxStage": 1,
-    "parents": [],
-    "children": [],
-    "cry": "sounds/pokemon/invalid.mp3",
-    "forms": {
-      "form-frozen": {
-        "name": "Invalid",
-        "fullName": "Invalid[Frozen]",
-        "types": [
-          "ice"
-        ],
-        "image": "images/pokemon/invalidfrozen.png",
-        "hasImage": true,
-        "formType": "cosmetic"
-      },
-      "form-thawed": {
-        "name": "Invalid",
-        "fullName": "Invalid[Thawed]",
-        "types": [
-          "rock",
-          "fire"
-        ],
-        "image": "images/pokemon/invalidthawed.png",
-        "hasImage": true,
-        "formType": "cosmetic"
-      },
-      "spiritbound": {
-        "name": "SB-Invalid",
-        "fullName": "SB-Invalid",
-        "types": [
-          "rock",
-          "fire",
-          "ice"
-        ],
-        "image": "images/pokemon/invalidsb.png",
-        "hasImage": true,
-        "formType": "spiritbound"
       }
     }
   },
@@ -379,7 +367,9 @@ export const pokedex = [
     "maxStage": 1,
     "parents": [],
     "children": [],
-    "cry": "sounds/pokemon/effithread.mp3",
+    "cry": {
+      "base": "sounds/pokemon/effithread.mp3"
+    },
     "forms": {
       "base": {
         "name": "Effithread",
@@ -389,6 +379,7 @@ export const pokedex = [
           "ghost"
         ],
         "image": "images/pokemon/effithread.png",
+        "cry": "sounds/pokemon/effithread.mp3",
         "hasImage": true,
         "formType": "base"
       }
@@ -399,15 +390,17 @@ export const pokedex = [
     "speciesId": "alupine",
     "name": "Alupine",
     "family": [
-      "timberwoof",
+      null,
       "alupine",
-      "alvu"
+      null
     ],
     "stage": 2,
     "maxStage": 3,
     "parents": [],
     "children": [],
-    "cry": "sounds/pokemon/alupine.mp3",
+    "cry": {
+      "base": "sounds/pokemon/alupine.mp3"
+    },
     "forms": {
       "base": {
         "name": "Alupine",
@@ -417,46 +410,9 @@ export const pokedex = [
           "normal"
         ],
         "image": "images/pokemon/alupine.png",
+        "cry": "sounds/pokemon/alupine.mp3",
         "hasImage": true,
         "formType": "base"
-      }
-    }
-  },
-  {
-    "dex": 124,
-    "speciesId": "lumiora",
-    "name": "Lumiora",
-    "family": [
-      "lumiora",
-      "astravelle"
-    ],
-    "stage": 1,
-    "maxStage": 2,
-    "parents": [],
-    "children": [],
-    "cry": "sounds/pokemon/lumiora.mp3",
-    "forms": {
-      "form-south": {
-        "name": "Lumiora",
-        "fullName": "Lumiora[South]",
-        "types": [
-          "fairy",
-          "dragon"
-        ],
-        "image": "images/pokemon/lumiorasouth.png",
-        "hasImage": true,
-        "formType": "cosmetic"
-      },
-      "form-north": {
-        "name": "Lumiora",
-        "fullName": "Lumiora[North]",
-        "types": [
-          "fairy",
-          "fire"
-        ],
-        "image": "images/pokemon/lumioranorth.png",
-        "hasImage": true,
-        "formType": "cosmetic"
       }
     }
   },
@@ -472,7 +428,9 @@ export const pokedex = [
     "maxStage": 2,
     "parents": [],
     "children": [],
-    "cry": "sounds/pokemon/daniel.mp3",
+    "cry": {
+      "base": "sounds/pokemon/daniel.mp3"
+    },
     "forms": {
       "base": {
         "name": "Daniel",
@@ -482,6 +440,7 @@ export const pokedex = [
           "fairy"
         ],
         "image": "images/pokemon/daniel.png",
+        "cry": "sounds/pokemon/daniel.mp3",
         "hasImage": true,
         "formType": "base"
       }
@@ -499,7 +458,9 @@ export const pokedex = [
     "maxStage": 2,
     "parents": [],
     "children": [],
-    "cry": "sounds/pokemon/dave.mp3",
+    "cry": {
+      "base": "sounds/pokemon/dave.mp3"
+    },
     "forms": {
       "base": {
         "name": "Dave",
@@ -509,6 +470,7 @@ export const pokedex = [
           "fairy"
         ],
         "image": "images/pokemon/dave.png",
+        "cry": "sounds/pokemon/dave.mp3",
         "hasImage": true,
         "formType": "base"
       }

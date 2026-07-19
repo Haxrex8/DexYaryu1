@@ -123,12 +123,45 @@ function computeStage(id) {
   return index + 1;
 }
 
+function getRevealedFamily(line) {
+  if (!SHOW_ONLY_WITH_IMAGES) {
+    return line;
+  }
+
+  const revealed = [];
+
+  for (const id of line) {
+
+const forms = groups[id];
+
+if (!forms) {
+  console.warn(`Missing species in raw.js: ${id}`);
+  revealed.push(null);
+  continue;
+}
+
+const hasImage = forms.some(f => {
+      const image = `images/pokemon/${assetId(f.fullName)}.png`;
+      return fs.existsSync(path.resolve(image));
+    });
+
+    if (hasImage) {
+      revealed.push(id);
+    } else {
+      revealed.push(null);
+    }
+  }
+
+  return revealed;
+}
+
 /* ================= BUILD POKEDEX ================= */
 
 export const pokedex = orderedIds
   .map((id, index) => {
   const forms = groups[id];
-  const evolutionLine = getEvolutionLine(id);
+  const fullEvolutionLine = getEvolutionLine(id);
+  const evolutionLine = getRevealedFamily(fullEvolutionLine);
 
   return {
     dex: index + 1,
@@ -138,48 +171,73 @@ export const pokedex = orderedIds
     /* ===== EVOLUTION ===== */
     family: evolutionLine,
     stage: computeStage(id),
-    maxStage: evolutionLine.length,
+    maxStage: fullEvolutionLine.length,
 
     parents: [],
     children: [],
 
-    cry: `sounds/pokemon/${id}.mp3`,
+   cry: Object.fromEntries(
+  forms.map(f => {
+    const key =
+      f.isSpiritbound
+        ? "spiritbound"
+        : f.customForm
+          ? `form-${normalize(f.customForm)}`
+          : "base";
+
+    const cryAsset = f.isSpiritbound
+      ? normalize(f.fullName)
+      : id;
+
+    return [key, `sounds/pokemon/${cryAsset}.mp3`];
+  })
+),
 
     /* ===== FORMS ===== */
-       forms: Object.fromEntries(
-      forms.map(f => {
-        let key = "base";
-        let formType = "base";
+forms: Object.fromEntries(
+  forms.map(f => {
+    let key = "base";
+    let formType = "base";
 
-        if (f.isSpiritbound) {
-          key = "spiritbound";
-          formType = "spiritbound";
-        } else if (f.customForm) {
-          key = `form-${normalize(f.customForm)}`;
-          formType = "cosmetic";
-        }
+    if (f.isSpiritbound) {
+      key = "spiritbound";
+      formType = "spiritbound";
+    } else if (f.customForm) {
+      key = `form-${normalize(f.customForm)}`;
+      formType = "cosmetic";
+    }
 
-        const image = `images/pokemon/${assetId(f.fullName)}.png`;
-        const imageFile = path.resolve(
-         process.cwd(),
-          "images",
-         "pokemon",
-         `${assetId(f.fullName)}.png`
-      );
+    const imageAsset = f.isSpiritbound
+      ? normalize(f.fullName)
+      : assetId(f.fullName);
 
-        return [
-          key,
-          {
-            name: f.speciesName,
-            fullName: f.fullName,
-            types: f.types,
-            image,
-            hasImage: fs.existsSync(imageFile),
-            formType
-          }
-        ];
-      })
-    )
+    const cryAsset = f.isSpiritbound
+      ? normalize(f.fullName)
+      : id;
+
+    const image = `images/pokemon/${imageAsset}.png`;
+
+    const imageFile = path.resolve(
+      process.cwd(),
+      "images",
+      "pokemon",
+      `${imageAsset}.png`
+    );
+
+    return [
+      key,
+      {
+        name: f.speciesName,
+        fullName: f.fullName,
+        types: f.types,
+        image,
+        cry: `sounds/pokemon/${cryAsset}.mp3`,
+        hasImage: fs.existsSync(imageFile),
+        formType
+      }
+    ];
+  })
+)
   };
 })
 .filter(entry =>

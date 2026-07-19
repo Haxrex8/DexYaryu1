@@ -291,6 +291,12 @@ body.dark {
   font-weight: bold;
 }
 
+.hidden-evo {
+  cursor: default;
+  opacity: 0.45;
+  pointer-events: none;
+}
+
 /* ================= BUTTONS ================= */
 
 button {
@@ -428,3 +434,22 @@ select option {
   }
 }
 
+.favorite-item {
+    padding: 8px 12px;
+    margin-bottom: 6px;
+
+    border-radius: 10px;
+
+    background: rgba(255,255,255,.06);
+    border: 1px solid rgba(255,255,255,.12);
+
+    cursor: pointer;
+    user-select: none;
+
+    transition: .2s;
+}
+
+.favorite-item:hover {
+    background: rgba(0,255,255,.12);
+    border-color: rgba(0,255,255,.35);
+}
