@@ -352,8 +352,17 @@ window.jumpToDex = () => {
 
 window.playCry = () => {
   const p = getCurrent();
-  if (!p?.cry) return;
-  new Audio(p.cry).play().catch(() => {});
+  if (!p) return;
+
+  // Use the currently selected form
+  const form =
+    p.forms[activeForm] ??
+    p.forms.base ??
+    Object.values(p.forms)[0];
+
+  if (!form?.cry) return;
+
+  new Audio(form.cry).play().catch(() => {});
 };
 
 window.toggleFavorite = () => {
