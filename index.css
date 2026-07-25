@@ -453,3 +453,19 @@ select option {
     background: rgba(0,255,255,.12);
     border-color: rgba(0,255,255,.35);
 }
+
+/* ================= SPLASH SCREEN ================= */
+
+.splash-screen {
+    position: fixed;
+    inset: 0;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    background: #05070d;
+
+    z-index: 99999;
+    cursor: pointer;
+}

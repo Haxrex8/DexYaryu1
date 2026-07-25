@@ -431,3 +431,38 @@ function init() {
 }
 
 init();
+
+const splash = document.getElementById("splashScreen");
+const splashImage = document.getElementById("splashImage");
+
+if (splash && splashImage) {
+    splash.addEventListener("click", () => {
+
+        splash.style.pointerEvents = "none";
+
+        splashImage.animate(
+            [
+                { opacity: 1, transform: "scale(1)" },
+                { opacity: 0, transform: "scale(1.03)" }
+            ],
+            {
+                duration: 700,
+                easing: "ease-out",
+                fill: "forwards"
+            }
+        );
+
+        splash.animate(
+            [
+                { backgroundColor: "#05070d" },
+                { backgroundColor: "rgba(5,7,13,0)" }
+            ],
+            {
+                duration: 700,
+                fill: "forwards"
+            }
+        );
+
+        setTimeout(() => splash.remove(), 700);
+    });
+}
