@@ -466,15 +466,3 @@ if (splash && splashImage) {
         setTimeout(() => splash.remove(), 700);
     });
 }
-
-const splash = document.getElementById("splashScreen");
-
-function closeSplash() {
-  splash.classList.add("hide");
-
-  splash.addEventListener("transitionend", () => {
-    splash.remove();
-  }, { once: true });
-}
-
-splash.addEventListener("pointerdown", closeSplash);
